@@ -30,6 +30,8 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 4 %% 3    # Modulo (returns the remainder after division)
 ```
 
+*Note: These are examples of a special type of function known as an 'operator'.*
+
 #### 3. Examples of mathematical functions
 
 ```R
@@ -39,7 +41,7 @@ sin( 1 )  # Trig functions (in radians)
 asin( 0.841471 )
 ```
 
-*Note: Note here how when calling a mathematical function, we use the name of the function (e.g., 'sqrt'), followed by the value we want to apply the function to (e.g., '4' ) in parantheses. This is an example of the standard way to apply almost any function in R to a value or variable.*
+*Note: See here how when calling a mathematical function, we use the name of the function (e.g., 'sqrt'), followed by the value we want to apply the function to (e.g., '4' ) in parantheses. This is an example of the standard way to apply almost any function in R to a value or variable.*
 
 #### 4. Order of operations and parantheses
 
@@ -75,7 +77,7 @@ These variable names will NOT work:
 * `TRUE` (This is an example of a reserved word in R)
 * `.0ne`
 
-*Notes: When naming variables, it is best to a) use meaningful labels that will allow you (at a later point) or a new user to easily identify what the variable is for, or b) include easy to find and understand notes/annotations describing what variables names refer to, thereby avoiding confusion at later time points and improving the readability of your code.
+*Note: When naming variables, it is best to a) use meaningful labels that will allow you (at a later point) or a new user to easily identify what the variable is for, or b) include easy to find and understand notes/annotations describing what variables names refer to, thereby avoiding confusion at later time points and improving the readability of your code.
 
 Assigning a value to a variable:
 ```R
