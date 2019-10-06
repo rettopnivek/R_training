@@ -9,7 +9,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * Basics
   * [User interface](docs/P002_RStudio_GUI.md)
   * [Basic R console commands](docs/P003_R_console_commands.md)
-  * [Data structures](doc/P004_Data_structures.md)
+  * [Data structures](docs/P004_Data_structures.md)
 * Applied examples
   * Downloading data from REDCap
 
