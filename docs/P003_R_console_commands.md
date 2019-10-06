@@ -7,9 +7,10 @@ In this section, I provide some simple examples of inputting commands to the R c
 ### Table of contents
 1. Annotations
 2. Examples of basic math
-3. Examples of mathematical functions
-4. Order of operations and parantheses
-5. Saving values as a variable
+3. Examples of conditional statements
+4. Examples of mathematical functions
+5. Order of operations and parantheses
+6. Saving values as a variable
 
 #### 1. Annotations
 
@@ -32,7 +33,20 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 
 *Note: These are examples of a special type of function known as an 'operator'.*
 
-#### 3. Examples of mathematical functions
+#### 3. Examples of conditional statements
+
+R has special operator functions that can check whether conditions are `TRUE` or `FALSE` - these are known as conditional statements:
+```R
+1 == 1 # Check if equal
+1 == 2
+4 > 1 # Check if greater than
+1 > 4
+4 <= 5 # Check if less than or equal to
+4 <= 4
+4 <= 3
+```
+
+#### 4. Examples of mathematical functions
 
 ```R
 sqrt( 4 ) # Square root
@@ -43,7 +57,7 @@ asin( 0.841471 )
 
 *Note: See here how when calling a mathematical function, we use the name of the function (e.g., 'sqrt'), followed by the value we want to apply the function to (e.g., '4' ) in parantheses. This is an example of the standard way to apply almost any function in R to a value or variable.*
 
-#### 4. Order of operations and parantheses
+#### 5. Order of operations and parantheses
 
 ```R
 10 + 8 * 4^2    # This is equivalent to...
@@ -56,7 +70,7 @@ asin( 0.841471 )
 
 If you aren't sure how the order of operations will work when writing out math, as shown in the examples above, you can use parantheses to clearly indicate to users (and to R) the order for which math should be performed.
 
-#### 5. Saving values as a variable
+#### 6. Saving values as a variable
 
 You can assign values to a variable, and can use arbitrary variable names when doing so, as long as these names confirm to a certain set of rules.
 1. Variable names can be a combination of letters, digits, single periods (.) and underscores (_);
