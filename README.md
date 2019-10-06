@@ -4,4 +4,4 @@ In the following, we provide a series of examples of using R in applied settings
 
 ### Table of contents
 
-[Installation](P001_R_installation.md)
+[Installation](docs/P001_R_installation.md)
