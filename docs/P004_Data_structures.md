@@ -10,6 +10,7 @@ In this section, we focus on on a set of 4 foundational objects in R, the 4 most
 2. Combining values into a vector
 3. Checking data types
 4. Converting between data types
+5. Advanced methods for creating vectors
 
 #### 1. Data types (Atomic vectors)
 
