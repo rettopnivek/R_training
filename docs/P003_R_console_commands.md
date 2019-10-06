@@ -79,12 +79,11 @@ Assigning a value to a variable:
 ```R
 a <- 2  # Best practice approach
 a = 2   # Equivalent, but can be easily confused with another R command '=='
+a       # Displays value assigned to variable
 ```
 
 Assigning values to variables allows for basic algebra:
 ```R
-a       # Displays value assigned to variable
-# If values are numeric, allows for basic algebra
 a <- 4; b <- 2; x <- 0.5; # Semi-colon separates multiple commands
 y <- a + b*x # Save output
 y
