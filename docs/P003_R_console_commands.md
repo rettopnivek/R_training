@@ -1,6 +1,6 @@
 ## Basic R Commands in the Console Window
 
-In this section, I provide some simple examples of inputting commands to the R console window. Note that as a programming language, R needs commands to be in specific formats without typos - if a typo is present, or if a command is called in the incorrect way, the console window will instead display an error message. Examples can be run by copying the code segment, pasting it into the R console window, and hitting 'return' or 'enter'.
+In this section, I provide some simple examples of inputting commands to the R console window. In the following, examples can be run by copying the code segment, pasting it into the R console window, and hitting 'return' or 'enter'. Note that as a programming language, R needs commands to be in specific formats without typos - if a typo is present, or if a command is called in the incorrect way, the console window will instead display an error message.
 
 *Note: Even for regular users of R, error messages are frequent, as programming is hard and programming languages are extremely strict regarding inputs. Do not feel bad about errors in your code or error messages, these are useful learning opportunities!*
 
@@ -74,6 +74,8 @@ These variable names will NOT work:
 * `_fine`
 * `TRUE` (This is an example of a reserved word in R)
 * `.0ne`
+
+*Notes: When naming variables, it is best to a) use meaningful labels that will allow you (at a later point) or a new user to easily identify what the variable is for, or b) include easy to find and understand notes/annotations describing what variables names refer to, thereby avoiding confusion at later time points and improving the readability of your code.
 
 Assigning a value to a variable:
 ```R
