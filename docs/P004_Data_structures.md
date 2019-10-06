@@ -30,7 +30,7 @@ vec_of_lgc <- c( TRUE, FALSE, T, F ) # T and F are shorthand
 vec_of_chr <- c( 'A', 'b', 'Hello' )
 ```
 
-*Notes: The function 'c' follows the standard procedure in R, in which you provide the function name followed by the list of values in parantheses to which you want to apply the function. The function 'c', however, provides a good example of how to pass multiple values to a function, by separating each value in the function by a comma.*
+*Note: The function 'c' follows the standard procedure in R, in which you provide the function name followed by the list of values in parantheses to which you want to apply the function. The function 'c', however, provides a good example of how to pass multiple values to a function, by separating each value in the function by a comma.*
 
 #### 3. Checking data types
 
@@ -114,7 +114,7 @@ rep( vec, 3 )
 rep( vec, each = 3 )
 ```
 
-*Notes: The above calls to the 'rep' function highlight another nuance to passing values into functions. Though 'rep( vec, 3 )' and 'rep( vec, each = 3 )' take the same input values, they produce different results because in the latter case, we have specified the exact name of the function argument for the value 3 to be assigned, which is different than the default argument to which the value 3 is assigned in the first example.*
+*Note: The above calls to the 'rep' function highlight another nuance to passing values into functions. Though 'rep( vec, 3 )' and 'rep( vec, each = 3 )' take the same input values, they produce different results because in the latter case, we have specified the exact name of the function argument for the value 3 to be assigned, which is different than the default argument to which the value 3 is assigned in the first example.*
 
 We can also generate vectors consisting of sequences of values using the operator `:`, as shown below:
 ```R
