@@ -4,11 +4,10 @@ In the following, I provide a series of examples of using R in applied settings,
 
 ### Table of contents
 
-[Installation](docs/P001_R_installation.md)
-
-[User interface](docs/P002_RStudio_GUI.md)
-
-[Basic R console commands](docs/P003_R_console_commands.md)
+  
+* [Installation](docs/P001_R_installation.md)
+* [User interface](docs/P002_RStudio_GUI.md)
+* [Basic R console commands](docs/P003_R_console_commands.md)
 
 ### Why R?
 
