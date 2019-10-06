@@ -5,6 +5,7 @@ In the following, I provide a series of examples of using R in applied settings,
 ### Table of contents
 
 [Installation](docs/P001_R_installation.md)
+
 [User interface](docs/P002_RStudio_GUI.md)
 
 ### Why R?
@@ -19,11 +20,14 @@ Additionally, R has simple and intuitive means for extensions via **R packages**
 
 ### Resources for R
 
-Below I provide a non-comprehensive list of links for resources for learning how to use R.
-* A [base R cheat sheet](github.com/rstudio/cheatsheets/raw/master/base-r.pdf), a PDF file providing examples of common R commands.
-* [Advanced R](http://adv-r.had.co.nz/Introduction.html), a online book by Hadley Wickham (aimed at intermediate to advanced users of R).
+R is a popular language, and there are a great many books and online tutorials written on R. Below are some example links:
+* A [R cheat sheet](https://cran.r-project.org/doc/contrib/Short-refcard.pdf), a PDF file listing R commands (useful to consult if you are trying to remember a standard R command).
+* [Learning Statistics with R](https://learningstatisticswithr.com/), an online book by Danielle Navarro for teaching introductory statistics to psychology students.
+* [Advanced R](http://adv-r.had.co.nz/Introduction.html), a online book by Hadley Wickham (aimed at intermediate to advanced users of R, useful to consult if you want more in-depth knowledge about how R works and how to best use it).
+* [Additional links](https://www.psychologicalscience.org/observer/learning-to-work-with-r) provided by the Association for Psychological Science.
 
-Additionally, R is a popular language, and there are a great many books written on how to use R.
+
 
 Last updated: 2019/10/06
+
 Written by: Kevin Potter
