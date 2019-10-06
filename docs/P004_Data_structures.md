@@ -38,7 +38,9 @@ It is useful to know how to check the type of vector stored in a workspace:
 ```R
 vec <- c( 1.4, 2.1, 3.4 )
 # Determine what the data type is
-typeof( vec ) # Returns 'double'
+class( vec ) # Returns 'numeric' (more general)
+typeof( vec ) # Returns 'double' (more specific)
+str( vec ) # Details on type, dimensions, and initial values
 # Tests whether is a vector is of a particular type
 is.double( vec ) # Returns TRUE
 is.character( vec ) # Returns FALSE
@@ -55,6 +57,12 @@ Note sometimes the data type can be non-intuitive:
 vec <- c( 1, 2, 3 ) # Looks like vector of integers
 is.integer( vec ) # Returns FALSE
 typeof( vec ) # Actually stored as 'double'
+```
+
+You can also easily determine how many elements are in a vector:
+```R
+vec <- seq( 1, 10, .33 )
+length( vec )
 ```
 
 #### 4. Converting between data types
@@ -96,7 +104,7 @@ Sometimes, R will not be able to coerce one data type to another:
 as.numeric( c( '1', '2', 'Kitties!' ) )
 ```
 
-#### 5. Advanced methods for creating vectors
+#### 6. Advanced methods for creating vectors
 
 R has a large number of convenience functions to allow a user to quickly create vectors containing values with desired characteristics.
 
