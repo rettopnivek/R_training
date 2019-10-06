@@ -8,6 +8,8 @@ In the following, I provide a series of examples of using R in applied settings,
 
 [User interface](docs/P002_RStudio_GUI.md)
 
+[Basic R console commands](docs/P003_R_console_commands.md)
+
 ### Why R?
 
 R is a programming language with a focus on data processing, data visualization, and statistical analyses. If you intend on regularly processing data, especially with the end-goal of performing statistical analyses (or preparing data for someone else to run statistical analyses), R is designed specifically to aid in this goal. Writing data processing, visualization, and analysis scripts in R can help, for example, with:
