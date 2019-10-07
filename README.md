@@ -12,6 +12,7 @@ In the following, I provide a series of examples of using R in applied settings,
   * [Basic data structures](docs/P004_Data_structures.md)
   * [Working with vectors](P005_Working_with_vectors.md)
   * [Matrices](P006_Matrices.md)
+  * [Lists](P007_Lists.md)
 * Applied examples
 * Templates
   * Downloading data from REDCap
