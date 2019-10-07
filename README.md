@@ -15,7 +15,7 @@ In the following, I provide a series of examples of using R in applied settings,
   * [Lists](docs/P007_Lists.md)
   * [Data frames](docs/P008_Data_frames.md)
 * R packages
-  * Installing R packages
+  * [Installing R packages](docs/P009_Installing_R_packages.md)
   * dplyr
   * stringr
   * REDCapR
