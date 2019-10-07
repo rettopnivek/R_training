@@ -7,8 +7,6 @@ The basic data structures in R revolve around vectors for a single data type. In
 1. Lists
 2. Indexing lists
 3. Working with lists
-4. Data frames
-5. Indexing data frames
 
 #### 1. Lists
 
@@ -82,13 +80,4 @@ lst$Level_1[[1]]
 ```
 
 #### 3. Working with lists
-
-#### 4. Data frames
-
-Data frames are the standard structure in which you will see most data for analytic purposes (e.g., data loaded from an Excel spreadsheet). A spreadsheet is a special type of nested list structure. Specifically, a data frame is a list of vectors of matching length. Because it is a list, the vectors can be of different data types (e.g., numbers, characters, or logical values). However, because the vectors are of matching length, in many ways the data frame can be treated like a matrix, allowing more flexible indexing options compared to a standard list.
-
-#### 5. Indexing data frames
-
-
-
 
