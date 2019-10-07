@@ -11,6 +11,7 @@ In the following, I provide a series of examples of using R in applied settings,
   * [Basic R console commands](docs/P003_R_console_commands.md)
   * [Basic data structures](docs/P004_Data_structures.md)
   * [Working with vectors](P005_Working_with_vectors.md)
+  * [Matrices](P006_Matrices.md)
 * Applied examples
 * Templates
   * Downloading data from REDCap
@@ -35,6 +36,6 @@ R is a popular language, and there are a great many books and online tutorials w
 
 
 
-Last updated: 2019/10/06
+Last updated: 2019/10/07
 
 Written by: Kevin Potter
