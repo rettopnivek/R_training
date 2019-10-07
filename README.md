@@ -10,10 +10,10 @@ In the following, I provide a series of examples of using R in applied settings,
 * Some foundations
   * [Basic R console commands](docs/P003_R_console_commands.md)
   * [Basic data structures](docs/P004_Data_structures.md)
-  * [Working with vectors](P005_Working_with_vectors.md)
-  * [Matrices](P006_Matrices.md)
-  * [Lists](P007_Lists.md)
-  * [Data frames](P008_Data_frames.md)
+  * [Working with vectors](docs/P005_Working_with_vectors.md)
+  * [Matrices](docs/P006_Matrices.md)
+  * [Lists](docs/P007_Lists.md)
+  * [Data frames](docs/P008_Data_frames.md)
 * Applied examples
 * Templates
   * Downloading data from REDCap
