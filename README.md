@@ -13,6 +13,7 @@ In the following, I provide a series of examples of using R in applied settings,
   * [Working with vectors](P005_Working_with_vectors.md)
   * [Matrices](P006_Matrices.md)
   * [Lists](P007_Lists.md)
+  * [Data frames](P008_Data_frames.md)
 * Applied examples
 * Templates
   * Downloading data from REDCap
