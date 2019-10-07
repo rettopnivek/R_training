@@ -117,5 +117,14 @@ M[ 1:2, ]
 M[ c( 1, 4 ), ]
 ```
 
+As before, you can also index matrices using conditional statements, though you need to carefully consider over what dimensions you are applying a conditional statement:
+```R
+M <- matrix( 1:10, 2, 5, byrow = T )
+# Show only columns in which first row
+# is greater than 3
+sel <- M[1,] > 3
+M[,sel]
+# However, M[sel,] does not work, returns an error
+```
 
 
