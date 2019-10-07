@@ -35,10 +35,12 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 
 #### 3. Examples of conditional statements
 
-R has special operator functions that can check whether conditions are `TRUE` or `FALSE` - these are known as conditional statements:
+R has special operator functions (binary relational operators) that can check whether conditions are `TRUE` or `FALSE` - these are known as conditional statements:
 ```R
 1 == 1 # Check if equal
 1 == 2
+1 != 2 # Check if not equal
+1 != 1
 4 > 1 # Check if greater than
 1 > 4
 4 <= 5 # Check if less than or equal to
