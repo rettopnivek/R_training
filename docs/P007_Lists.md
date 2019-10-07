@@ -1,6 +1,6 @@
-## Lists and Data Frames
+## Lists
 
-The basic data structures in R revolve around vectors for a single data type. In other words, a vector can consist of all numeric values, or all character strings, but not a combination of both. However, the data sets we are interested in analyzing will naturally consist of a diverse set of data types, from numbers to character strings to more complex types like dates and times. R provides a more complicated data structure to allow users to store tables with these diverse data types, known as a __data frame__. Just as matrices can be thought of as a collection of vectors, a __data frame__ in turn can be thought of as a collection of __lists__. The __list__ is a structure that allows storing different elements of any form (vectors, matrices, even other __lists__) together as a single object. A __data frame__ is a specific combination of __lists__ that results in a structure like a matrix, but one that is much more flexible about data types.
+The basic data structures in R revolve around vectors for a single data type. In other words, a vector can consist of all numeric values, or all character strings, but not a combination of both. However, the data sets we are interested in analyzing will naturally consist of a diverse set of data types, from numbers to character strings to more complex types like dates and times. R provides a more complicated data structure to allow users to store tables with these diverse data types, known as a __data frame__. However, to understand __data frames__, first we neen to understand __lists__, because just as matrices can be thought of as a collection of vectors, a __data frame__ in turn can be thought of as a collection of __lists__. The __list__ is a structure that allows storing different elements of any form (vectors, matrices, even other __lists__) together as a single object.
 
 ### Table of contents
   
@@ -80,4 +80,56 @@ lst$Level_1[[1]]
 ```
 
 #### 3. Working with lists
+
+Just as it is more complicated indexing lists because of disparate data types, the tools for working with lists (e.g., checking dimensions, adding or removing elements, converting elements, etc.) are also more complicated.
+
+You can easily determine the number of elements stored in a list, but more advanced methods are required to extract the dimensions of those internal elements.
+```R
+# List with elements of differing lengths
+lst <- list( 1:3, 'Hello', c( TRUE, FALSE ) )
+length( lst ) # Returns 3
+# Advanced methods needed to determine 
+# internal length
+sapply( lst, length )
+
+# Nested list with differing number of elements across 
+# and within levels
+lst <- list( Level_1 = list( 1:3, 1:2, 1 ), Level_2 = list( 1 ) )
+length( lst ) # Only returns number of outermost elements
+sapply( lst, length ) # Returns number of nested lists
+```
+
+R provides flexible means of adding or removing elements to a list:
+```R
+lst <- list( 1:3 )
+# Add new element
+lst[[2]] <- c( 'Dog', 'Cat' )
+# Add a named element
+lst$Lgc <- TRUE
+lst
+
+# Remove an element to a list
+lst[[2]] <- NULL
+lst$Lgc <- NULL
+lst
+```
+
+Lists cannot be easily converted into simpler data types, such as a vector. R therefore provides a function `unlist` that will extract all internal elements of a list, and arrange them into a vector using the most flexible data type present internally:
+```R
+# Initialize list
+vec_1 <- 1:3
+vec_2 <- c( 'Dog', 'Cat', 'Mouse' )
+mat_1 <- matrix( 1:9, 3, 3 )
+lst <- list( vec_1, vec_2, mat_1 )
+
+# as.numeric( lst ) # Will not work, produces an error
+vec <- unlist( lst ) # Converts into a vector
+vec
+# Of class character, because one the of elements 
+# was a vector of character strings
+```
+
+The `unlist` function is an important tool, because R often will store complex data structures internally as a list, making it easy to accidentally try to use a function meant for vectors or matrices on a list object, resulting in an error message.
+
+
 
