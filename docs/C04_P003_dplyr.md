@@ -9,6 +9,8 @@ In this section, I focus on the package 'dplyr', which provides powerful tools f
 
 #### 1. Sections
 
+[Example data](D04_P001_Puzzles.csv) for puzzle completion time from Hays (1994).
+
 Content.
 
 ```R
@@ -16,5 +18,9 @@ Content.
 ```
 
 *Note: Advanced content.*
+
+#### References
+
+Hays, W. L. (1994), Statistics (5th edition), Harcourt Brace, Fort Worth, Texas.
 
 
