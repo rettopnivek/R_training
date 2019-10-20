@@ -7,7 +7,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * [Prerequisites](docs/C01_P000_Prerequisites.md)
 * [RStudio](docs/C02_P000_RStudio.md)
 * [Foundations](docs/C03_P000_Foundations.md)
-* Data processing
+* [Data processing](docs/C04_P000_Data_processing.md)
 * Templates
 
 ### Why R?
