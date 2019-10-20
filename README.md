@@ -30,6 +30,6 @@ R is a popular language, and there are a great many books and online tutorials w
 
 
 
-Last updated: 2019/10/07
+Last updated: 2019/10/20
 
 Written by: Kevin Potter
