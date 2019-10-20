@@ -2,26 +2,13 @@
 
 In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric  research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
 
-### Table of contents
+### Chapters
   
-* Prerequisites
-  * [Installation](docs/P001_R_installation.md)
-  * [User interface](docs/P002_RStudio_GUI.md)
-* Some foundations
-  * [Basic R console commands](docs/P003_R_console_commands.md)
-  * [Basic data structures](docs/P004_Data_structures.md)
-  * [Working with vectors](docs/P005_Working_with_vectors.md)
-  * [Matrices](docs/P006_Matrices.md)
-  * [Lists](docs/P007_Lists.md)
-  * [Data frames](docs/P008_Data_frames.md)
-  * [Installing R packages](docs/P009_Installing_R_packages.md)
+* [Prerequisites](docs/C01_P000_Prerequisites.md)
+* [RStudio](docs/C02_P000_RStudio.md)
+* [Foundations](docs/C03_P000_Foundations.md)
 * Data processing
-  * dplyr
-  * stringr
-  * REDCapR
-* Applied examples
 * Templates
-  * Downloading data from REDCap
 
 ### Why R?
 
