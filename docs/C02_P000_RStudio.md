@@ -4,6 +4,6 @@ R is a programming language, and using R typically involves typing out commands 
 
 ### Table of contents
 
-* [Installation](docs/C02_P001_Installation.md)
-* [User interface](docs/C02_P002_RStudio_GUI.md)
+* [Installation](C02_P001_Installation.md)
+* [User interface](C02_P002_RStudio_GUI.md)
 
