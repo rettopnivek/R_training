@@ -1,6 +1,6 @@
 ## Examples of Using R in Applied Settings
 
-In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric  research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
+In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
 
 ### Chapters
   
@@ -8,6 +8,8 @@ In the following, I provide a series of examples of using R in applied settings,
 * [RStudio](docs/C02_P000_RStudio.md)
 * [Foundations](docs/C03_P000_Foundations.md)
 * [Data processing](docs/C04_P000_Data_processing.md)
+* Data analysis
+* Applied examples
 * Templates
 
 ### Why R?
