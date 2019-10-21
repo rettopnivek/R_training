@@ -84,6 +84,126 @@ Rather then having to embed the object `a` in multiple sets of parantheses, we c
 * __arrange()__: Re-order or arrange rows
 * __mutate()__: Create new columns
 
+The `select()` function allows you to select or exclude columns:
+```R
+# Select specific columns
+df %>% 
+  select(
+    name,
+    genus
+  ) %>% 
+  head() # Display first 6 rows
+
+# Exclude specific columns
+df %>% 
+  select(
+    -genus,
+    -vore,
+    -order,
+    -conservation,
+    -sleep_total,
+    -sleep_rem,
+    -sleep_cycle
+  ) %>% 
+  head()
+
+# Select all columns within a range
+df %>% 
+  select(
+    sleep_total:sleep_cycle
+  ) %>% 
+  head()
+
+# Select columns that meet certain criteria
+
+# A) Columns that start with a set of set of characters
+df %>% 
+  select(
+    starts_with( 'sl' )
+  ) %>% 
+  head()
+
+# B) Columns that end with a set of set of characters
+df %>% 
+  select(
+    ends_with( 'wt' )
+  ) %>% 
+  head()
+
+# C) Columns that contain a set of characters
+df %>% 
+  select(
+    contains( '_' )
+  ) %>% 
+  head()
+
+# Other options
+# matches()
+# one_of()
+
+# Select columns via a character vector
+sel <- c( 'name', 'awake', 'brainwt' )
+df %>% 
+  select(
+    sel
+  ) %>% 
+  head()
+```
+
+The `filter()` function allows you to filter rows based on conditional statements:
+```R
+# Select rows for animals with a sleep total greater 
+# than or equal to 18 hours, excluding missing data
+df %>% 
+  filter(
+    !is.na( sleep_total ) & 
+    sleep_total >= 18
+  )
+
+# Select rows for animals who were classified as 
+# either carnivores or herbivores
+df %>% 
+  filter(
+    vore %in% c( 'carni', 'herbi' )
+  )
+
+# Define a logical vector to index rows
+sel <- 
+    df$vore %in% c( 'carni', 'herbi' ) & 
+    !is.na( df$sleep_total ) & 
+    df$sleep_total > 16
+df %>% 
+    filter(
+        sel
+    )
+```
+
+```R
+df %>% 
+  select(
+    name,
+    order,
+    sleep_total
+  ) %>% 
+  arrange(
+    order,
+    sleep_total
+  ) %>% 
+  head()
+
+df %>% 
+  select(
+    name,
+    order,
+    sleep_total
+  ) %>% 
+  arrange(
+    desc(order),
+    sleep_total
+  ) %>% 
+  head()
+```
+
 *Note: Advanced content.*
 
 
