@@ -1,4 +1,5 @@
-## Examples of Using R in Applied Settings
+Written by: Kevin Potter
+Last updated: 2019/10/21
 
 In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
 
@@ -30,9 +31,3 @@ R is a popular language, and there are a great many books and online tutorials w
 * [Learning Statistics with R](https://learningstatisticswithr.com/), an online book by Danielle Navarro for teaching introductory statistics to psychology students.
 * [Advanced R](http://adv-r.had.co.nz/Introduction.html), a online book by Hadley Wickham (aimed at intermediate to advanced users of R, useful to consult if you want more in-depth knowledge about how R works and how to best use it).
 * [Additional links](https://www.psychologicalscience.org/observer/learning-to-work-with-r) provided by the Association for Psychological Science.
-
-
-
-Last updated: 2019/10/21
-
-Written by: Kevin Potter
