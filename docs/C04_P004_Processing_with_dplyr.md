@@ -10,10 +10,10 @@ The 'dplyr' package provides tools to for common data manipulation operations, i
 1. Prerequisites
 2. The pipe operator
 3. Basic functions for manipulating data frames
-  1. Selecting columns via __select()__
-  2. Filtering rows via __filter()__
-  3. Reorder rows via __arrange()__
-  4. Create new columns via __mutate()__
+  3.1. Selecting columns via __select()__
+  3.2. Filtering rows via __filter()__
+  3.3. Reorder rows via __arrange()__
+  3.4. Create new columns via __mutate()__
 
 #### 1. Prerequisites
 
