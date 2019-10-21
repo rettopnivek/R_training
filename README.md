@@ -9,6 +9,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * [Foundations](docs/C03_P000_Foundations.md)
 * [Data processing](docs/C04_P000_Data_processing.md)
 * Data analysis
+* FAQ
 * Applied examples
 * Templates
 
@@ -32,6 +33,6 @@ R is a popular language, and there are a great many books and online tutorials w
 
 
 
-Last updated: 2019/10/20
+Last updated: 2019/10/21
 
 Written by: Kevin Potter
