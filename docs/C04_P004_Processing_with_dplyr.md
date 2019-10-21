@@ -15,6 +15,12 @@ The 'dplyr' package provides tools to for common data manipulation operations, i
   3.3. Reorder rows via __arrange()__
   3.4. Create new columns via __mutate()__
 
+1. Item
+2. Item
+   * Mixed
+   * Mixed  
+3. Item
+
 #### 1. Prerequisites
 
 Below, I describe how to install and load 'dplyr', as well as how to get the data used as the running example in this section. 
