@@ -74,4 +74,5 @@ vec['Ducks']
 # Passing a missing value as an index results in strange behavior
 vec[NA]
 ```
+[Return to sections](C00_P002_Chapters.md)
 
