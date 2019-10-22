@@ -8,3 +8,4 @@ R is a programming language, and using R typically involves typing out commands 
 * [User interface](C02_P002_RStudio_GUI.md)
 * R projects
 
+[Return to sections](C00_P002_Chapters.md)
