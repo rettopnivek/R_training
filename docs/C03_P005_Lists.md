@@ -131,5 +131,6 @@ vec
 
 The `unlist` function is an important tool, because R often will store complex data structures internally as a list, making it easy to accidentally try to use a function meant for vectors or matrices on a list object, resulting in an error message.
 
+[Return to sections](C00_P002_Chapters.md)
 
 
