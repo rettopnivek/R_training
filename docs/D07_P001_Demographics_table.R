@@ -1,4 +1,3 @@
-```R
 # Demographics table example
 # Written by Kevin Potter
 # email: kevin.w.potter@gmail.com
@@ -1061,8 +1060,4 @@ print( anova( lmf ) )
 
 # Clean up workspace
 rm( lmf, lmf_2, sel, tbl, res, dtba )
-
-```
-
-[Return to sections](C00_P002_Chapters.md)
 
