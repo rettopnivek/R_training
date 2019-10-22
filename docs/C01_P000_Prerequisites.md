@@ -7,3 +7,6 @@ R is freely available and runs on a wide variety of UNIX platforms, Windows, and
 * [Installing R](C01_P001_R_installation.md)
 * Updating R
 * Extensions
+
+
+[Sections](C00_P002_Chapters.md)
