@@ -13,7 +13,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * Data analysis
 * FAQ
 * [Applied examples](docs/C07_P000_Applied_examples.md)
-* Templates
+* [Templates](docs/C08_P000_Templates.md)
 
 ### Why R?
 
