@@ -14,7 +14,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * [Data processing](docs/C04_P000_Data_processing.md)
 * Data analysis
 * FAQ
-* Applied examples
+* [Applied examples](docs/C07_P000_Applied_examples.md)
 * Templates
 
 ### Why R?
