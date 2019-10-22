@@ -4,4 +4,7 @@ Forthcoming
 
 ### Table of contents
 
-* [Label](docs/C00_P000.md)
+* [Label](C00_P000.md)
+
+
+[Sections](C00_P002_Chapters.md)
