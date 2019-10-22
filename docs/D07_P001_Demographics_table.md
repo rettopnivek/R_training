@@ -1063,3 +1063,6 @@ print( anova( lmf ) )
 rm( lmf, lmf_2, sel, tbl, res, dtba )
 
 ```
+
+[Return to sections](C00_P002_Chapters.md)
+
