@@ -6,6 +6,6 @@ Below are in-depth examples of applied problems with real-world data.
 
 ### Table of contents
 
-* [Demographics table for REDCap data](D07_P001_Demographics_table.md)
+* [Demographics table for REDCap data](C07_P001_Demographics_table.md)
 
 [Return to sections](C00_P002_Chapters.md)
