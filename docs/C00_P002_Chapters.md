@@ -7,4 +7,4 @@
 * Data analysis
 * FAQ
 * [Applied examples](C07_P000_Applied_examples.md)
-* Templates
+* [Templates](C08_P000_Templates.md)
