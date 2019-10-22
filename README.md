@@ -1,5 +1,3 @@
-## R Training
-
 <p align="center">
   Kevin Potter (updated 2019/10/22)
 </p>
