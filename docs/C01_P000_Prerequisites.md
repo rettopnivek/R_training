@@ -9,4 +9,4 @@ R is freely available and runs on a wide variety of UNIX platforms, Windows, and
 * Extensions
 
 
-[Sections](C00_P002_Chapters.md)
+[Return to sections](C00_P002_Chapters.md)
