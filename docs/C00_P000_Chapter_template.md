@@ -6,9 +6,4 @@ Forthcoming
 
 * [Label](C00_P000.md)
 
-
-
-
-
-
-[Sections](C00_P002_Chapters.md)
+[Return to sections](C00_P002_Chapters.md)
