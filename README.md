@@ -4,7 +4,7 @@
 
 In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
 
-### Chapters
+### Sections
   
 * [Prerequisites](docs/C01_P000_Prerequisites.md)
 * [RStudio](docs/C02_P000_RStudio.md)
