@@ -23,3 +23,5 @@ The __Source__ window displays R script files. To create a new R script, go to '
 At the top right of the __Source__ window, there are two buttons. If you set your cursor on a line with a command, or highlight a sequence of commands, you can tell R to process this selection of commands and display the results in the __Console__ window (i.e., 'run' the commands) by clicking 'Run'. To run the entire set of commands in a R script, you can click on the 'Source' button. At the top left of the __Source__ window, there are additional buttons to help with writing scripts. Two of the most useful are the 'Save' button (the floppy disk icon), and the 'Search' option (the magnifying glass). Also, by default RStudio provides code highlighting, using different color schemes to make R code more readable and easy to understand.
 
 *Note: You can change the style and appearance of the code highlighting in the 'Global options' pop-up window under the 'Appearances' tab. You can also change indenting and auto-complete options in the 'Code' tab.*
+
+[Return to sections](C00_P002_Chapters.md)
