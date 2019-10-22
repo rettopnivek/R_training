@@ -30,3 +30,6 @@ library( dplyr )
 # Now can safely call function from package
 filter
 ```
+
+[Return to sections](C00_P002_Chapters.md)
+
