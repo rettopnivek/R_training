@@ -46,3 +46,5 @@ save( raw_dat, cn, file = 'REDCap_data.RData' )
 
 Downloading, especially for large projects, can be slow and take a few minutes. Data is downloading is smaller chunks, and R will provide a progress report for each chunk, the most important part being a status code. If there are no issues while downloading data, the status code will be '200'.
 
+[Return to sections](C00_P002_Chapters.md)
+
