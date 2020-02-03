@@ -1,5 +1,5 @@
 <p align="center">
-  Kevin Potter (updated 2019/11/27)
+  Kevin Potter (updated 2020/02/03)
 </p>
 
 In the following, I provide a series of examples of using R in applied settings, with a focus on applications for clinical/psychiatric research and data processing. These examples are meant to be intuitive and accessible, for people without much experience in programming.
@@ -10,7 +10,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * [RStudio](docs/C02_P000_RStudio.md)
 * [Foundations](docs/C03_P000_Foundations.md)
 * [Data processing](docs/C04_P000_Data_processing.md)
-* Data analysis
+* [Data analysis](docs/C05_P000_Data_analysis.md)
 * FAQ
 * [Applied examples](docs/C07_P000_Applied_examples.md)
 * [Templates](docs/C08_P000_Templates.md)
