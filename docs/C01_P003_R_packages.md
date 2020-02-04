@@ -52,10 +52,31 @@ install.packages("package_to_update")
 
 #### 3. Using packages
 
-Forthcoming
+By default, even after installing an R package, the data and functions included in this package will not be available for use when you start an R session. You must first load the package into memory, typically via the __library__ command.
+
+*Note: the 'library' comman is so named to allude to how packages are stored in a library that you can access.*
+
+```R
+# Load a package in for use
+library( 'package_name' )
+# Quotations are not necessary
+library( package_name ) # Will also work
+```
+
+There are some additional commands that can be helpful:
+```R
+.libPaths() # Get location on computer where packages are installed
+library()   # See all packages installed
+search()    # See packages currently loaded
+```
+
+*Note: it is possible to access a function from a package without loading the package first, via the '::' notation. If you have the function 'foo' which is part of an already installed package 'pck', the command 'pck::foo()' will allow you to run the function.*
+
+Furthermore, RStudio provides a pane that allows you see what packages you have installed, and allows you load/unload these packages by clicking a check box.
 
 #### 4. Additional resources
 
-Forthcoming
+* The R manual's [entry](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Packages) on packages.
+* Hadley Wickham's [introduction](http://r-pkgs.had.co.nz/intro.html) to R packages.
 
 [Return to sections](C00_P002_Chapters.md)
