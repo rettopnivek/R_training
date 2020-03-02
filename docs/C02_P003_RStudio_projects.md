@@ -4,6 +4,7 @@ When using R and RStudio for data processing and analysis, often you will end up
 
 ### Table of contents
 1. Creating an RStudio Project
+2. RStudio Project features
 
 #### 1. Creating an RStudio Project
 
@@ -15,14 +16,17 @@ There are multiple ways to create an RStudio project. First, click on the 'File'
 
 *Note: Here is a useful [guide](https://happygitwithr.com/rstudio-git-github.html) on how to link an RStudio project to a Github repository.*
 
-Once you select the appropriate option, follow the on-screen prompts to finish creating your project. Once the project has been created, it will load in a new Rstudio session associated with that project. You can load in sessions associated with previous projects via the 'Open Project' option in the 'File' tab. You can also open a separate window with a new session associated with a different RStudio project via the 'Open Project in New Session' option in the 'File' tab.
+Once you select the appropriate option, follow the on-screen prompts to finish creating your project.
 
-RStudio projects are helpful because of several using tracking features. For example:
+#### 2. RStudio Project features
+
+Once you have created an RStudio project, a new Rstudio session specifically associated with the project will load. You can load in sessions associated with previous projects via the 'Open Project' option in the 'File' tab. You can also open a separate window with a new session associated with a different RStudio project via the 'Open Project in New Session' option in the 'File' tab.
+
+RStudio projects are helpful because of several useful tracking features. For example:
 
 * You can quickly change R's working directory to the location of the project directory via the 'Set Working Directory' pulldown menu in the 'Session' tab.
 * You can have RStudio save the R workspace associated with the project, and then have RStudio reload this workspace every time you open the project.
 * RStudio will automatically track R scripts and other files opened in the 'Source' pane and re-open these files when you reload the project.
-
 
 [Return to sections](C00_P002_Chapters.md)
 
