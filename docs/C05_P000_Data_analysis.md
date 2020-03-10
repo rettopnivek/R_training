@@ -4,9 +4,11 @@ The following sections discuss and provide examples of a variety of analyses tha
 
 ### Table of contents
 
-* Probability
-* Useful notes - p-values
-* Simple comparisons
+* Descriptive statistics
+* Plotting data
 * Non-parametric methods
+* Simple comparisons
+* Regression
+* Generalized linear models (GLMs)
 
 [Return to sections](C00_P002_Chapters.md)
