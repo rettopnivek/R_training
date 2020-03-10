@@ -4,10 +4,10 @@ Here is an example of creating a simple text progress bar in R to track the prog
 
 ```R
 # Specify the maximum number of iterations
-total = 10
+total <- 10
 
 # Create a progress bar using a base R function
-pb = txtProgressBar( min = 1, max = total, style = 3 )
+pb <- txtProgressBar( min = 1, max = total, style = 3 )
 
 # Loop over cases
 for (i in 1:total) {
