@@ -67,7 +67,36 @@ harmonic_mean( x )
 
 #### 2. Computing summary statistics over multiple variables
 
-Forthcoming
+Typically, researchers will have multiple variables that they want to compute summary statistics over, such as age, height, and weight, or gender and racial categories. There are several ways to have R compute statistics over a range of variable, though choices need to be made based on
+
+* Whether you need to isolate a subset of variables in the data frame /matrix
+* How you choose to isolate this subset of variables
+* What statistics need to be computed
+* Whether multiple statistics need to be computed
+
+In base R, there are some built-in functions to quickly compute common calculations over columns (and rows), like `colSums` and `colMeans`. R also has a flexible function, `apply` that 'applies' a given function over the rows or columns of a data frame or matrix.
+
+```
+# Simulate fake continuous data
+n <- 100
+df <- data.frame( Age = rnorm( n, 25, 4 ), Height = rnorm( n, 1.78, .08 ), Weight = rnorm( n, 170, 15 ) )
+
+# R has built-in function to compute mean over columns
+colMeans( df )
+
+# Otherwise, one can use the 'apply' function
+apply( df, 
+       2, # 1 refers to rows, 2 refers to columns; Specifying 2 gives equivalent results to 'colMeans'
+       mean )
+# The 'apply' function makes it easy to compute any univariate statistic over columns
+apply( df, 2, sd ) # Standard deviation
+apply( df, 2, median )
+
+# The 'apply' function can also handle more complex statistics and custom functions
+apply( df, 2, quantile, prob = c( .25, .75) ) # Inter-quartile range
+# Mean, median, and standard deviation rounded to two decimal places
+apply( df, 2, function(x) round( c( mean(x), median(x), sd(x), 2 ) ) )
+```
 
 #### 3. Computing summary statistics over grouping factors
 
