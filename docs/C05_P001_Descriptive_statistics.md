@@ -76,7 +76,7 @@ Typically, researchers will have multiple variables that they want to compute su
 
 In base R, there are some built-in functions to quickly compute common calculations over columns (and rows), like `colSums` and `colMeans`. R also has a flexible function, `apply` that 'applies' a given function over the rows or columns of a data frame or matrix.
 
-```
+```R
 # Simulate fake continuous data
 n <- 100
 df <- data.frame( Age = rnorm( n, 25, 4 ), Height = rnorm( n, 1.78, .08 ), Weight = rnorm( n, 170, 15 ) )
