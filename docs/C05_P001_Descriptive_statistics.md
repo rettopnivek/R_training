@@ -87,7 +87,8 @@ colMeans( df )
 # Otherwise, one can use the 'apply' function
 apply( df, 
        2, # 1 refers to rows, 2 refers to columns; Specifying 2 gives equivalent results to 'colMeans'
-       mean )
+       mean # The function to use
+     )
 # The 'apply' function makes it easy to compute any univariate statistic over columns
 apply( df, 2, sd ) # Standard deviation
 apply( df, 2, median )
@@ -97,6 +98,25 @@ apply( df, 2, quantile, prob = c( .25, .75) ) # Inter-quartile range
 # Mean, median, and standard deviation rounded to two decimal places
 apply( df, 2, function(x) round( c( mean(x), median(x), sd(x), 2 ) ) )
 ```
+
+Using base R, you can combine these approaches with the standard methods of indexing to isolate a subset of variables or rows:
+```
+# Compute the standard deviation for the first 2 variables
+apply( df[,1:2], 2, sd )
+# Compute the median for age and weight
+apply( df[,c( 'Age', 'Weight' )], 2, median )
+
+# Create an index variable
+index = c( 1, 3 )
+# Compute variance for indexed variables over first 50 rows
+apply( df[ 1:50, index ], 2, var )
+
+# Select only rows with a age higher than 25
+index = df$Age > 25
+apply( df[ index, ], 2, mean )
+```
+
+*Note: Combining functions like apply with the base R subsetting tools can often produce dense code. For more intuitive and readable code, check the R package [dplyr](https://dplyr.tidyverse.org/) by Hadley Wickham.*
 
 #### 3. Computing summary statistics over grouping factors
 
