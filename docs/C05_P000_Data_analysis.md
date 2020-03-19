@@ -4,7 +4,7 @@ The following sections discuss and provide examples of a variety of analyses tha
 
 ### Table of contents
 
-* Descriptive statistics
+* [Descriptive statistics](C05_P001_Descriptive_statistics.md)
 * Plotting data
 * Non-parametric methods
 * Simple comparisons
