@@ -116,7 +116,7 @@ index = df$Age > 25
 apply( df[ index, ], 2, mean )
 ```
 
-*Note: Combining functions like apply with the base R subsetting tools can often produce dense code. For more intuitive and readable code, check the R package [dplyr](https://dplyr.tidyverse.org/) by Hadley Wickham.*
+*Note: Combining functions like apply with the base R subsetting tools can often produce dense code. For more options to write intuitive and readable code, check out the R package [dplyr](https://dplyr.tidyverse.org/) by Hadley Wickham.*
 
 #### 3. Computing summary statistics over grouping factors
 
