@@ -17,9 +17,13 @@ RStudio provides four panes meant to display:
 
 ### The Console Window
 
+![Console Window](I0004_RStudio_console_highlighted.png)
+
 The __Console__ window allows you to directly type commands for R to process. The __Console__ window then displays the results of these commands, or if you run a R script, the results of running all the commands listed in the script.
 
 ### The Source Window
+
+![Console Window](I0005_RStudio_source_highlighted.png)
 
 The __Source__ window displays R script files. To create a new R script, go to 'File' in the file menu, click 'New file' and choose 'R Script' (*The keyboard shortcut is Ctrl+Shft+N, as listed on the right*). Multiple scripts can be open at once, in which case the __Source__ window provides a series of tabs with the file name associated with each script. Clicking on a tab displays that given script in the __Source__ window, and you can then edit the script at your leisure.
 
