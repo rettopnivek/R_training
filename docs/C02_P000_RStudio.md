@@ -7,5 +7,6 @@ R is a programming language, and using R typically involves typing out commands 
 * [Installation](C02_P001_Installation.md)
 * [User interface](C02_P002_RStudio_GUI.md)
 * [RStudio projects](C02_P003_RStudio_projects.md)
+* [Best practices for organzing files and folders](C02_P004_RStudio_project_setup.md)
 
 [Return to sections](C00_P002_Chapters.md)
