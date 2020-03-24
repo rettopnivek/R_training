@@ -6,8 +6,8 @@ Installing and using an R package is very straightforward, and some R packages (
 
 ### Table of contents
 1. Installing an R package
-2. Managing installed packages
-3. Using packages
+2. Using packages
+3. Managing installed packages
 4. Additional resources
 
 #### 1. Installing R packages
@@ -34,23 +34,7 @@ install.packages("devtools")
 devtools::install_github("github_username/name_of_repository")
 ```
 
-#### 2. Managing installed packages
-
-R provides a range of commands to manage your installed packages, including commands to list, uninstall, and update packages.
-```R
-# List of all packages that have been installed
-installed.packages()
-# Remove an installed package
-remove.packages("package_to_remove")
-# List packages that are out-of-date
-old.packages()
-# Update all installed packages
-update.packages()
-# Update a specific package
-install.packages("package_to_update")
-```
-
-#### 3. Using packages
+#### 2. Using packages
 
 By default, even after installing an R package, the data and functions included in this package will not be available for use when you start an R session. You must first load the package into memory, typically via the __library__ command.
 
@@ -73,6 +57,23 @@ search()    # See packages currently loaded
 *Note: it is possible to access a function from a package without loading the package first, via the '::' notation. If you have the function 'foo' which is part of an already installed package 'pck', the command 'pck::foo()' will allow you to run the function.*
 
 Furthermore, RStudio provides a pane that allows you see what packages you have installed, and allows you load/unload these packages by clicking a check box.
+
+#### 3. Managing installed packages
+
+R provides a range of commands to manage your installed packages, including commands to list, uninstall, and update packages.
+```R
+# List of all packages that have been installed
+installed.packages()
+# Remove an installed package
+remove.packages("package_to_remove")
+# List packages that are out-of-date
+old.packages()
+# Update all installed packages
+update.packages()
+# Update a specific package
+install.packages("package_to_update")
+```
+
 
 #### 4. Additional resources
 
