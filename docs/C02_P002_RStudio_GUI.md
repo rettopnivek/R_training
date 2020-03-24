@@ -4,9 +4,6 @@ RStudio provides a feature-rich interface for programming in R, providing a larg
 
 *Note: RStudio is an example of an Integrated Development Environment (IDE)*.
 
-Below is an example of the default RStudio interface:
-![RStudio panes](I0003_RStudio_panes.png)
-
 RStudio provides four panes meant to display:
 * The __Console__ window (for input and output when programming in R);
 * The __Source__ window (where R scripts are shown);
@@ -23,7 +20,7 @@ The __Console__ window allows you to directly type commands for R to process. Th
 
 ### The Source Window
 
-![Console Window](I0005_RStudio_source_highlighted.png)
+![Source Window](I0005_RStudio_source_highlighted.png)
 
 The __Source__ window displays R script files. To create a new R script, go to 'File' in the file menu, click 'New file' and choose 'R Script' (*The keyboard shortcut is Ctrl+Shft+N, as listed on the right*). Multiple scripts can be open at once, in which case the __Source__ window provides a series of tabs with the file name associated with each script. Clicking on a tab displays that given script in the __Source__ window, and you can then edit the script at your leisure.
 
@@ -33,20 +30,22 @@ At the top right of the __Source__ window, there are two buttons. If you set you
 
 ### The Environment Window
 
-The __Environment__ window provides several useful tabs - of particular interest are the 'Environment' and 'Help' tabs.
+![Environment Window](I0006_RStudio_environment_highlighted.png)
 
-The 'Environment' tab lists the various objects that are currently defined in your R workspace (e.g., values, variables, and functions). You can delete all objects in your workspace, by clicking the 'broom' icon located at the top below the list of tabs. You can save all objects in your workspace by clicking the 'disk' symbol. You can load in previously saved workspaces (with the extension '.RData') by clicking the folder icon.
-
-The 'Help' tab displays entries from R's documentation (e.g., the documentation for a function). You can use this tab to search over all the documentation pages, via the search bar at the top right of the tab. To search for phrases within a specific help page, you can use the other search bar located at the top left, beneath the list of tabs.
+The __Environment__ window provides several useful tabs. The 'Environment' tab lists the various objects that are currently defined in your R workspace (e.g., values, variables, and functions). You can delete all objects in your workspace, by clicking the 'broom' icon located at the top below the list of tabs. You can save all objects in your workspace by clicking the 'disk' symbol. You can load in previously saved workspaces (with the extension '.RData') by clicking the folder icon.
 
 ### The Viewer window
 
-The __Viewer__ window also provides several useful tabs - of particular interest here are the 'Plots', 'Packages', and 'Files' tabs.
+![Viewer Window](I0007_RStudio_viewer_highlighted.png)
+
+The __Viewer__ window also provides several useful tabs - of particular interest here are the 'Plots', 'Packages', 'Files', and 'Help' tabs.
 
 The 'Files' tab displays the folders and files located in R's current working directory. R can access files in this directory without having to specify the full path. You can change the working directory by clicking 'Session' in the file menu, selecting 'Set Working Directory', and then selecting on of the options in the pull-down menu.
 
 The 'Packages' tab displays all R packages installed on your computer. R packages that are currently loaded have a check mark, and clicking an unchecked box will promptly load in the associated R package.
 
 The 'Plots' tab displays any figures that R has generated. The arrow keys allow viewing previously generated figures. You can save a created figure by selected the 'Export' icon, and you can clear all figures from the viewer by clicking the 'broom' icon.
+
+The 'Help' tab displays entries from R's documentation (e.g., the documentation for a function). You can use this tab to search over all the documentation pages, via the search bar at the top right of the tab. To search for phrases within a specific help page, you can use the other search bar located at the top left, beneath the list of tabs.
 
 [Return to sections](C00_P002_Chapters.md)
