@@ -4,6 +4,9 @@ RStudio provides a feature-rich interface for programming in R, providing a larg
 
 *Note: RStudio is an example of an Integrated Development Environment (IDE)*.
 
+Below is an example of the default RStudio interface:
+![RStudio panes](I0003_RStudio_panes.png)
+
 RStudio provides four panes meant to display:
 * The __Console__ window (for input and output when programming in R);
 * The __Source__ window (where R scripts are shown);
