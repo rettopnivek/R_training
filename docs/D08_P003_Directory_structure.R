@@ -66,5 +66,8 @@ setwd( 'Output' )
 # Save pathway
 folder_pathways$Output = getwd()
 
+# Return to main directory
+setwd( folder_pathways$Project )
 
-
+# Clean up workspace
+rm( folder_pathways )
