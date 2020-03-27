@@ -5,7 +5,6 @@ RStudio greatly streamlines the process of creating easily organized files and f
 ### Table of contents
 1. Benefits of consistent organization and naming schemes
 2. General recommendations
-3. Examples
 
 #### 1. Benefits of consistent organization and naming schemes
 
@@ -32,18 +31,14 @@ When writing R code, you will need to often need create names and labels for var
 2. Be consistent - choose a naming scheme (or set of naming schemes) and use them in the same way throughout a project.
 3. If you need to use abbreviations or unintuitive variable names (either for the sake of conciseness or when variables or functions defined by others), annotate the code using the '#' symbol.
 
-There are several types of naming conventions to pick from when writing code:
-* alllowercase
-* period.separated
-* underscore_separated
-* lowerCamelCase
-* UpperCamelCase
+There are several types of naming conventions that you can find across a variety of coding scenarios. Below, I list 5 common ones:
+* All lower case (e.g., myvariablename)
+* Period separated (e.g., my.variable.name)
+* Underscore separated (e.g., my_variable_name)
+* Lower Camel case (e.g., myVariableName)
+* Upper Camel case (e.g., MyVariableName)
 
-```R
-# Example R code
-```
-
-*Note: Advanced content.*
+Again, regardless of which type you pick (or combination), the most important thing to remember is to be consistent throughout your code.
 
 [Return to sections](C00_P002_Chapters.md)
 
