@@ -41,13 +41,13 @@ vec <- c( 1.4, 2.1, 3.4 )
 class( vec ) # Returns 'numeric' (more general)
 typeof( vec ) # Returns 'double' (more specific)
 str( vec ) # Details on type, dimensions, and initial values
-# Tests whether is a vector is of a particular type
+# Tests whether a vector is of a particular type
 is.double( vec ) # Returns TRUE
 is.character( vec ) # Returns FALSE
 is.logical( vec )
 is.integer( vec )
 
-is.numeric( vec ) # Checks if a vector is is double or an integer
+is.numeric( vec ) # Checks if a vector is double or an integer
 vec <- c( 'A', 'B', 'C' )
 is.numeric( vec ) # Now returns FALSE
 ```
