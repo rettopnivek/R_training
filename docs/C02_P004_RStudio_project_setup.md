@@ -40,6 +40,9 @@ There are several types of naming conventions that you can find across a variety
 
 Again, regardless of which type you pick (or combination), the most important thing to remember is to be consistent throughout your code.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C02_P000_RStudio.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
 
 
