@@ -8,6 +8,10 @@ This means that...
 
 To install the latest version of R, simply repeat the steps outlined in the [installation](C01_P001_R_installation.md) section.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C01_P000_Prerequisites.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
+
 
 
