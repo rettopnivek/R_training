@@ -48,4 +48,7 @@ The 'Plots' tab displays any figures that R has generated. The arrow keys allow 
 
 The 'Help' tab displays entries from R's documentation (e.g., the documentation for a function). You can use this tab to search over all the documentation pages, via the search bar at the top right of the tab. To search for phrases within a specific help page, you can use the other search bar located at the top left, beneath the list of tabs.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C02_P000_RStudio.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
