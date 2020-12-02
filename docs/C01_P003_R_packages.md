@@ -80,4 +80,8 @@ install.packages("package_to_update")
 * The R manual's [entry](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Packages) on packages.
 * Hadley Wickham's [introduction](http://r-pkgs.had.co.nz/intro.html) to R packages.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C01_P000_Prerequisites.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
+
