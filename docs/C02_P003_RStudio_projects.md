@@ -28,6 +28,9 @@ RStudio projects are helpful because of several useful tracking features. For ex
 * You can have RStudio save the R workspace associated with the project, and then have RStudio reload this workspace every time you open the project.
 * RStudio will automatically track R scripts and other files opened in the 'Source' pane and re-open these files when you reload the project.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C02_P000_RStudio.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
 
 
