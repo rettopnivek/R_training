@@ -40,7 +40,7 @@ vec[ index ]
 In a more complicated example, one can label each element in a vector, and then use the labels to extract specific elements:
 ```R
 # Create a vector with named/labeled elements
-number_of_pets = c( 'Dogs' = 2, 'Ferrets' = 1, 'Fish' = 2 )
+number_of_pets <- c( 'Dogs' = 2, 'Ferrets' = 1, 'Fish' = 2 )
 number_of_pets['Dogs']
 number_of_pets[ c( 'Dogs', 'Fish' ) ]
 ```
