@@ -114,6 +114,6 @@ y <- a + b*x # Update output
 y # Now holds updated output
 ```
 
-*Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol ';' without having to hit 'enter' and start a new line.*
+*Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol without having to hit 'enter' and start a new line.*
 
 [Return to sections](C00_P002_Chapters.md)
