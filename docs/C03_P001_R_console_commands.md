@@ -116,4 +116,7 @@ y # Now holds updated output
 
 *Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol without having to hit 'enter' and start a new line.*
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C03_P000_Foundations.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
