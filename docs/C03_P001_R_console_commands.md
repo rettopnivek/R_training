@@ -4,14 +4,18 @@ In this section, I provide some simple examples of inputting commands to the R c
 
 *Note: Even for regular users of R, error messages are frequent, as programming is hard and programming languages are extremely strict regarding inputs. Do not feel bad about errors in your code or error messages, these are useful learning opportunities!*
 
+<a name="TOC"></a>
 ### Table of contents
-1. Annotations
-2. Examples of basic math
-3. Examples of conditional statements
-4. Examples of mathematical functions
-5. Order of operations and parantheses
-6. Saving values as a variable
+1. <a href="#S01">Annotations</a>
+2. <a href="#S02">Examples of basic math</a>
+3. <a href="#S03">Examples of conditional statements</a>
+4. <a href="#S04">Examples of mathematical functions</a>
+5. <a href="#S06">Order of operations and parantheses</a>
+6. <a href="#S06">Saving values as a variable</a>
 
+<a href="#END">&#8628;</a>
+
+<a name="S01"></a>
 #### 1. Annotations
 
 Preceding any input with the `#` symbol will prevent R from running the input. This provides a simple way to add notes and comments to code, and I use this freqeuntly in the following examples.
@@ -20,6 +24,9 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 # R will not run this line of text because it is preceded by '#'
 ```
 
+<a href="#TOC">&#10548;</a> <a href="#END">&#8628;</a>
+
+<a name="S02"></a>
 #### 2. Examples of basic math
 
 ```R
@@ -33,6 +40,9 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 
 *Note: These are examples of a special type of function known as an 'operator'.*
 
+<a href="#TOC">&#10548;</a> <a href="#END">&#8628;</a>
+
+<a name="S03"></a>
 #### 3. Examples of conditional statements
 
 R has special operator functions (binary relational operators) that can check whether conditions are `TRUE` or `FALSE` - these are known as conditional statements:
@@ -48,6 +58,9 @@ R has special operator functions (binary relational operators) that can check wh
 4 <= 3
 ```
 
+<a href="#TOC">&#10548;</a> <a href="#END">&#8628;</a>
+
+<a name="S04"></a>
 #### 4. Examples of mathematical functions
 
 ```R
@@ -59,6 +72,7 @@ asin( 0.841471 )
 
 *Note: See here how when calling a mathematical function, we use the name of the function (e.g., 'sqrt'), followed by the value we want to apply the function to (e.g., '4' ) in parantheses. This is an example of the standard way to apply almost any function in R to a value or variable.*
 
+<a name="S05"></a>
 #### 5. Order of operations and parantheses
 
 ```R
@@ -72,6 +86,9 @@ asin( 0.841471 )
 
 If you aren't sure how the order of operations will work when writing out math, as shown in the examples above, you can use parantheses to clearly indicate to users (and to R) the order for which math should be performed.
 
+<a href="#TOC">&#10548;</a> <a href="#END">&#8628;</a>
+
+<a name="S06"></a>
 #### 6. Saving values as a variable
 
 You can assign values to a variable, and can use arbitrary variable names when doing so, as long as these names confirm to a certain set of rules.
@@ -116,7 +133,8 @@ y # Now holds updated output
 
 *Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol without having to hit 'enter' and start a new line.*
 
+<a name="END"></a>
 Return to:
-[Table of contents](C03_P000_Foundations.md);
+[Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+[Home page](https://rettopnivek.github.io/R_training/)
