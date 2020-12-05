@@ -1,27 +1,35 @@
 ## Working with Character Strings
 
-Introduction
+Base R provides several tools for displaying, indexing, and manipulating strings.
 
 ### Table of contents
-1. Combine strings
-2. Case conversion
-3. Searching through strings
+1. <a href="#S01">Displaying strings</a>
+2. <a href="#S02">Special characters and symbols</a>
+
+<a href="#END">&#129147;</a>
 
 <a name="S01"></a>
 #### 1. Displaying strings
 
-R provides several functions for printing a string to the console output.
+R provides several functions for displaying a string in the console window.
 
-The __print__ command is a generic function that can be used to display a string or vectr of strings in the console window:
+The __print__ command is a generic function that can be used to display a string or vector of strings in the console window:
 
 ```R
 ex <- c( 'Hello', 'world' )
 print( ex ) # Includes numeric indicator for line
 
+# Example with internal double quotes
 ex <- 'The "R" project'
-print( ex ) # By default strings displayed in quoted form
-print( ex, quote = F ) # Strings can be shown in unquoted form
-noquote( ex )
+
+# By default strings displayed in quoted form
+# Note the use of backslashes to preserve 
+# internal double quotes
+print( ex )
+
+# Strings can be shown in unquoted form
+print( ex, quote = F )
+noquote( ex ) # Wrapper for 'print' with quote set to FALSE
 ```
 
 *Note: A generic function is a function that adjusts what it outputs based on the type of input it recieves. For example, the 'print' command will generate different output based on whether the input is a simple string or data frame.*
@@ -36,6 +44,43 @@ cat( 'Lower', '-', 'case', sep = '' ) # Remove space
 ex <- c( 'The', '"R"', 'project' )
 cat( ex )
 ```
+
+The __format__ command is a flexible function that provides several different options to produce organized, nice looking output. The __format__ command is especially useful for converting numbers into nicely formatted strings:
+
+```R
+# By default, equivalent output to 'print'
+format( 'The "R" project' )
+
+# Can pad strings with blank 
+# spaces so they have an equal 
+# number of characters
+vec <- c( 'A', 'BB', 'CCC' )
+cbind( format( vec ) )
+# Can control justification as well
+cbind( format( vec, justify = 'right' ) )
+cbind( format( vec, justify = 'centre' ) ) # Note use of British spelling
+
+# Can be used to round numbers to a 
+# specified number of decimals
+vec <- c( 0.123, 1.23, 100.2 )
+# Numbers padded with 0 to have 
+# same number of decimal places
+cbind( format( vec, digits = 2 ) )
+```
+
+<a name="S02"></a>
+#### 2. Special characters and symbols
+
+```R
+# New lines
+string <- 'Line 1\nLine 2\n\nLine 4\n'
+cat( string )
+
+# Tab
+string <- 'A\tB\t\tC'
+cat( string )
+```
+
 
 <a name="S02"></a>
 #### 2. Combine strings
