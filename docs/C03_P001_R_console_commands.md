@@ -24,7 +24,7 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 # R will not run this line of text because it is preceded by '#'
 ```
 
-<a href="#TOC">&#129081;</a> <a href="#END">&#129083;</a>
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S02"></a>
 #### 2. Examples of basic math
