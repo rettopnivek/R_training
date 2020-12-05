@@ -9,6 +9,7 @@ In the following, I provide a series of examples of using R in applied settings,
 * [Prerequisites](docs/C01_P000_Prerequisites.md)
 * [RStudio](docs/C02_P000_RStudio.md)
 * [Foundations](docs/C03_P000_Foundations.md)
+* R packages
 * [Data processing](docs/C04_P000_Data_processing.md)
 * [Data analysis](docs/C05_P000_Data_analysis.md)
 * [FAQ](docs/C06_P000_FAQ.md)
