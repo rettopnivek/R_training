@@ -51,7 +51,7 @@ Again, regardless of which type you pick (or combination), the most important th
 
 <a name="END"></a>
 Return to:
-[Table of contents](C02_P000_RStudio.md);
+[RStudio](C02_P000_RStudio.md);
 [Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+[Home page](https://rettopnivek.github.io/R_training/)
 
