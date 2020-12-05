@@ -3,10 +3,13 @@
 Introduction
 
 ### Table of contents
-1. Case conversion
-2. 
+1. Combine strings
+2. Case conversion
+3. Searching through strings
 
 ### 1. Combine strings
+
+Base R uses the command 'paste' to combine character strings.
 
 ```R
 # By default adds a space between strings
@@ -19,6 +22,10 @@ paste0( 'cat', 'nip' )
 # Functions are vectorized
 paste( 'Part', c( '1', '2', '3' ) )
 paste0( c( 'A','B', 'C' ), ')' )
+
+# Can also convert a vector of 
+# strings into a single string
+paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
 ``` 
 
 #### 2. Case conversion
@@ -37,6 +44,7 @@ toupper( 'abc' )
 toupper( c( 'a', 'b', 'c' ) )
 ```
 
+### 3. Searching through strings
 
 ```R
 # Example R code
