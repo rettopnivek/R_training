@@ -5,5 +5,5 @@ RStudio provides a more feature-rich graphical user interface (GUI) for using R 
 Return to:
 [RStudio](C02_P000_RStudio.md);
 [Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+[Home page](https://rettopnivek.github.io/R_training/)
 
