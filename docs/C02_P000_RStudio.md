@@ -9,4 +9,7 @@ R is a programming language, and using R typically involves typing out commands 
 * [RStudio projects](C02_P003_RStudio_projects.md)
 * [Best practices for organzing files and folders](C02_P004_RStudio_project_setup.md)
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
+
