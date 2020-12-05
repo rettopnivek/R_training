@@ -13,7 +13,7 @@ In this section, I provide some simple examples of inputting commands to the R c
 5. <a href="#S06">Order of operations and parantheses</a>
 6. <a href="#S06">Saving values as a variable</a>
 
-<a href="#END">&#129083;</a>
+<a href="#END">&#129147;</a>
 
 <a name="S01"></a>
 #### 1. Annotations
@@ -40,7 +40,7 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 
 *Note: These are examples of a special type of function known as an 'operator'.*
 
-<a href="#TOC">&#129081;</a> <a href="#END">&#129083;</a>
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S03"></a>
 #### 3. Examples of conditional statements
@@ -58,7 +58,7 @@ R has special operator functions (binary relational operators) that can check wh
 4 <= 3
 ```
 
-<a href="#TOC">&#129081;</a> <a href="#END">&#129083;</a>
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S04"></a>
 #### 4. Examples of mathematical functions
@@ -86,7 +86,7 @@ asin( 0.841471 )
 
 If you aren't sure how the order of operations will work when writing out math, as shown in the examples above, you can use parantheses to clearly indicate to users (and to R) the order for which math should be performed.
 
-<a href="#TOC">&#129081;</a> <a href="#END">&#129083;</a>
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S06"></a>
 #### 6. Saving values as a variable
@@ -133,7 +133,7 @@ y # Now holds updated output
 
 *Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol without having to hit 'enter' and start a new line.*
 
-<a href="#TOC">&#129081;</a>
+<a href="#TOC">&#129145;</a>
 
 <a name="END"></a>
 Return to:
