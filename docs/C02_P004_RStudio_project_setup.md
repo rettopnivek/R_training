@@ -2,10 +2,14 @@
 
 RStudio greatly streamlines the process of creating easily organized files and folders via the combination of RStudio projects and navigation tools like the 'Files' tab in the viewer pane. It is therefore highly recommended to take advantage of these features and develop a consistent set of practices for organizing and naming your files and folders, along with arranging and annotating your code, irrespective of the size of the project you are working on. In the following, I describe some guiding principles and provide examples of how to go about creating clean code and directory structures.
 
+<a name="TOC"></a>
 ### Table of contents
-1. Benefits of consistent organization and naming schemes
-2. General recommendations
+1. <a href="#S01">Benefits of consistent organization and naming schemes</a>
+2. <a href="#S01">General recommendations</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Benefits of consistent organization and naming schemes
 
 Using a modular file and folder organization, consistent naming practices, and annotating code (adding notes describing what the code does and how it works) have distinct benefits, improving reproducibility, readability, and ensuring faster implementation with fewer errors:
@@ -14,6 +18,7 @@ Using a modular file and folder organization, consistent naming practices, and a
 * Consistent naming practices, both in files/folders and with your code, will make it easier for others to read and understand.
 * Modular file organization (e.g., having a dedicated folder for data, another for R scripts, and another for output like figures or tables), makes it easier to locate files, and to isolate sources of errors or missing dependencies.
 
+<a name="S02"></a>
 #### 2. General recommendations
 
 While there are no ironclad rules on how to best write R code and organize your files, there are several helpful recommendations to bear in mind.
@@ -40,6 +45,9 @@ There are several types of naming conventions that you can find across a variety
 
 Again, regardless of which type you pick (or combination), the most important thing to remember is to be consistent throughout your code.
 
+<a href="#TOC">&#129145;</a>
+
+<a name="END"></a>
 Return to:
 [Table of contents](C02_P000_RStudio.md);
 [Sections](C00_P002_Chapters.md);
