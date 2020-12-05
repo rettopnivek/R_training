@@ -18,6 +18,8 @@ Using a modular file and folder organization, consistent naming practices, and a
 * Consistent naming practices, both in files/folders and with your code, will make it easier for others to read and understand.
 * Modular file organization (e.g., having a dedicated folder for data, another for R scripts, and another for output like figures or tables), makes it easier to locate files, and to isolate sources of errors or missing dependencies.
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
 <a name="S02"></a>
 #### 2. General recommendations
 
@@ -52,5 +54,4 @@ Return to:
 [Table of contents](C02_P000_RStudio.md);
 [Sections](C00_P002_Chapters.md);
 [Title page](https://rettopnivek.github.io/R_training/)
-
 
