@@ -10,7 +10,6 @@ The following sections discuss basic operations and data structures in R that ar
 * [Matrices](C03_P004_Matrices.md)
 * [Lists](C03_P005_Lists.md)
 * [Data frames](C03_P006_Data_frames.md)
-* [Installing R packages](C03_P007_Installing_R_packages.md)
-* [Character strings](C03_P008_Strings.md)
+* [Character strings](C03_P007_Strings.md)
 
 [Return to sections](C00_P002_Chapters.md)
