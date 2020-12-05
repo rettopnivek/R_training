@@ -4,12 +4,16 @@ R packages allow users to extend the base functionality of R for their own purpo
 
 Installing and using an R package is very straightforward, and some R packages (e.g., 'dplyr' and 'ggplot2') have become a standard part of the regular R user's toolset.
 
+<a name="TOC"></a>
 ### Table of contents
-1. Installing an R package
-2. Using packages
-3. Managing installed packages
-4. Additional resources
+1. <a href="#S01">Installing an R package</a>
+2. <a href="#S02">Using packages</a>
+3. <a href="#S03">Managing installed packages</a>
+4. <a href="#S04">Additional resources</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Installing R packages
 
 To install a package available in R's primary repository, __CRAN__, you can use a base R function:
@@ -34,6 +38,9 @@ install.packages("devtools")
 devtools::install_github("github_username/name_of_repository")
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Using packages
 
 By default, even after installing an R package, the data and functions included in this package will not be available for use when you start an R session. You must first load the package into memory, typically via the __library__ command.
@@ -58,6 +65,9 @@ search()    # See packages currently loaded
 
 Furthermore, RStudio provides a pane that allows you see what packages you have installed, and allows you load/unload these packages by clicking a check box.
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Managing installed packages
 
 R provides a range of commands to manage your installed packages, including commands to list, uninstall, and update packages.
@@ -74,14 +84,16 @@ update.packages()
 install.packages("package_to_update")
 ```
 
-
+<a name="S04"></a>
 #### 4. Additional resources
 
 * The R manual's [entry](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Packages) on packages.
 * Hadley Wickham's [introduction](http://r-pkgs.had.co.nz/intro.html) to R packages.
 
+<a href="#TOC">&#129145;</a>
+
 Return to:
-[Table of contents](C01_P000_Prerequisites.md);
+[Prerequisites](C01_P000_Prerequisites.md);
 [Sections](C00_P002_Chapters.md);
 [Title page](https://rettopnivek.github.io/R_training/)
 
