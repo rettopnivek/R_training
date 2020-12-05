@@ -95,5 +95,5 @@ install.packages("package_to_update")
 Return to:
 [Prerequisites](C01_P000_Prerequisites.md);
 [Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+[Home page](https://rettopnivek.github.io/R_training/)
 
