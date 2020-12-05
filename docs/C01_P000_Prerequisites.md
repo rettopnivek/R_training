@@ -8,5 +8,5 @@ R is freely available and runs on a wide variety of UNIX platforms, Windows, and
 * [Updating R](C01_P002_Updating_R.md)
 * [R packages](C01_P003_R_packages.md)
 
-
-[Return to sections](C00_P002_Chapters.md)
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
