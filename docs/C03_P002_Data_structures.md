@@ -142,4 +142,8 @@ seq( -1.5, 1.5, .5 )
 seq( 0, 1, length = 4 )
 ```
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Table of contents](C03_P000_Foundations.md);
+[Sections](C00_P002_Chapters.md);
+[Title page](https://rettopnivek.github.io/R_training/)
+
