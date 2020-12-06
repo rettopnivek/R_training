@@ -1,15 +1,48 @@
 ## Working with Character Strings
 
-Base R provides several tools for displaying, indexing, and manipulating strings.
+Character strings are an important data type. Many data sets will include character strings to represent information like dates, subject identifiers, labels for groups and conditions, notes regarding data quality, and other content. Base R provides several tools for displaying, indexing, and manipulating strings.
 
+<a name="TOC"></a>
 ### Table of contents
-1. <a href="#S01">Displaying strings</a>
-2. <a href="#S02">Special characters and symbols</a>
+1. <a href="#S01">Creating strings</a>
+2. <a href="#S02">Displaying strings</a>
+3. <a href="#S03">Combining strings</a>
+4. <a href="#S04">Case conversion</a>
 
 <a href="#END">&#129147;</a>
 
 <a name="S01"></a>
-#### 1. Displaying strings
+#### 1. Creating strings
+
+A string is defined in R using single or double quotes:
+
+```R
+ex <- "This is a string"; ex
+ex <- 'This is also a string'; ex
+```
+
+When defining a string, the type of closing quote must match the type of opening quote. Care must be taken when intermixing single and double quotes:
+
+```R
+# To display single quotes as part of the 
+# string, define string using double quotes
+ex <- "The 'R' project"; ex
+
+# To display double quotes as part of the 
+# string, define string using single quotes
+ex <- 'The "R" project'; ex
+
+# Alternatively, can use the backslash to 
+# define a special character for double quotes
+ex <- "The \"R\" project"; ex
+```
+
+R has predefined constants for the Roman alphabet and for the months
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
+#### 2. Displaying strings
 
 R provides several functions for displaying a string in the console window.
 
@@ -43,6 +76,16 @@ cat( 'Lower', '-', 'case', sep = '' ) # Remove space
 # Does not display quoted form nor an indicator for line
 ex <- c( 'The', '"R"', 'project' )
 cat( ex )
+
+# Note 'print' and 'cat' differ in how they 
+# display special characters like new lines '\n'
+# or tab spaces '\t'
+
+# Define string with the special character 
+# for a new line
+ex <- 'Line 1\nLine 2\n\nLine 4'
+print( ex ) # New line is represented by special character
+cat( ex ) # New line is taken literally
 ```
 
 The __format__ command is a flexible function that provides several different options to produce organized, nice looking output. The __format__ command is especially useful for converting numbers into nicely formatted strings:
@@ -55,7 +98,11 @@ format( 'The "R" project' )
 # spaces so they have an equal 
 # number of characters
 vec <- c( 'A', 'BB', 'CCC' )
+# Use 'cbind' to convert to 
+# column matrix to better show 
+# alignment and padding
 cbind( format( vec ) )
+
 # Can control justification as well
 cbind( format( vec, justify = 'right' ) )
 cbind( format( vec, justify = 'centre' ) ) # Note use of British spelling
@@ -68,22 +115,10 @@ vec <- c( 0.123, 1.23, 100.2 )
 cbind( format( vec, digits = 2 ) )
 ```
 
-<a name="S02"></a>
-#### 2. Special characters and symbols
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
-```R
-# New lines
-string <- 'Line 1\nLine 2\n\nLine 4\n'
-cat( string )
-
-# Tab
-string <- 'A\tB\t\tC'
-cat( string )
-```
-
-
-<a name="S02"></a>
-#### 2. Combine strings
+<a name="S03"></a>
+#### 3. Combine strings
 
 Base R uses the command 'paste' to combine character strings.
 
@@ -104,8 +139,10 @@ paste0( c( 'A','B', 'C' ), ')' )
 paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
 ``` 
 
-<a name="S03"></a>
-#### 3. Case conversion
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S04"></a>
+#### 4. Case conversion
 
 We can convert upper-case letters to lower-case:
 ```R
@@ -121,7 +158,7 @@ toupper( 'abc' )
 toupper( c( 'a', 'b', 'c' ) )
 ```
 
-There is also a single wrapper to both functions:
+There is a single wrapper to both functions:
 ```R
 # Converts to lower-case
 casefold( 'ABC' )
@@ -129,7 +166,7 @@ casefold( 'ABC' )
 casefold( 'abc', upper = T )
 ```
 
-### 3. Searching through strings
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 ```R
 # Example R code
@@ -137,6 +174,13 @@ casefold( 'abc', upper = T )
 
 *Note: Advanced content.*
 
-[Return to sections](C00_P002_Chapters.md)
+<a href="#TOC">&#129145;</a>
+
+<a name="END"></a>
+Return to:
+Foundations
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
+
 
 
