@@ -4,14 +4,18 @@ A simple way to think of R is that it consists of a workspace or environment tha
 
 In this section, we focus on on a set of 4 foundational objects in R, the 4 most commonly used __atomic vector__ types. See the [Data structures](http://adv-r.had.co.nz/Data-structures.html) chapter of Hadley Wickham's book for more in-depth details about these data types.
 
+<a name="TOC"></a>
 ### Table of contents
   
-1. Data types (Atomic vectors)
-2. Combining values into a vector
-3. Checking data types
-4. Converting between data types
-5. Advanced methods for creating vectors
+1. <a href="#S01">Data types (Atomic vectors)</a>
+2. <a href="#S02">Combining values into a vector</a>
+3. <a href="#S03">Checking data types</a>
+4. <a href="#S04">Converting between data types</a>
+5. <a href="#S05">Advanced methods for creating vectors</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Data types (Atomic vectors)
 
 The 4 most commonly used __atomic vector__ types are:
@@ -20,6 +24,9 @@ The 4 most commonly used __atomic vector__ types are:
 3. Logicals (either `TRUE` or `FALSE`);
 4. Characters (e.g., letters like 'A' or 'b', or strings of letters, like 'Hello');
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Combining values into a vector
 
 A set of values of the same type can be combined (or concatenated) using the R function `c` and stored as a named multi-valued __atomic vector__:
@@ -32,6 +39,9 @@ vec_of_chr <- c( 'A', 'b', 'Hello' )
 
 *Note: The function 'c' follows the standard procedure in R, in which you provide the function name followed by the list of values in parantheses to which you want to apply the function. The function 'c', however, provides a good example of how to pass multiple values to a function, by separating each value in the function by a comma.*
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Checking data types
 
 It is useful to know how to check the type of vector stored in a workspace:
@@ -65,6 +75,9 @@ vec <- seq( 1, 10, .33 )
 length( vec )
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S04"></a>
 #### 4. Converting between data types
 
 A critical part of data processing will involve conversions between these data types. Furthermore, a common source of errors involves problems converting between data types. Users should especially be aware that sometimes R will do operations or conversions 'behind-the-scenes', returning results that are incorrect or not useful without providing an error message or warning.
@@ -104,7 +117,10 @@ Sometimes, R will not be able to coerce one data type to another:
 as.numeric( c( '1', '2', 'Kitties!' ) )
 ```
 
-#### 6. Advanced methods for creating vectors
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S05"></a>
+#### 5. Advanced methods for creating vectors
 
 R has a large number of convenience functions to allow a user to quickly create vectors containing values with desired characteristics.
 
@@ -142,8 +158,10 @@ seq( -1.5, 1.5, .5 )
 seq( 0, 1, length = 4 )
 ```
 
-Return to:
-[Table of contents](C03_P000_Foundations.md);
-[Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+<a href="#TOC">&#129145;</a>
 
+<a name="END"></a>
+Return to:
+[Foundations](C03_P000_Foundations.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
