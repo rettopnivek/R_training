@@ -51,15 +51,14 @@ vec <- c( 1.4, 2.1, 3.4 )
 class( vec ) # Returns 'numeric' (more general)
 typeof( vec ) # Returns 'double' (more specific)
 str( vec ) # Details on type, dimensions, and initial values
+
 # Tests whether a vector is of a particular type
-is.double( vec ) # Returns TRUE
-is.character( vec ) # Returns FALSE
+is.numeric( vec ) # Returns TRUE
+is.double( vec )
+is.integer( vec ) # Returns FALSE
+is.character( vec )
 is.logical( vec )
 is.integer( vec )
-
-is.numeric( vec ) # Checks if a vector is double or an integer
-vec <- c( 'A', 'B', 'C' )
-is.numeric( vec ) # Now returns FALSE
 ```
 
 Note sometimes the data type can be non-intuitive:
@@ -84,8 +83,9 @@ A critical part of data processing will involve conversions between these data t
 
 When combining disparate data types, they are coerced to the most flexible type:
 ```R
+# Converts all values to 'character'
 vec <- c( 1, 2, 'Kitties!' )
-typeof( vec ) # Converts all values to 'character'
+typeof( vec )
 ```
 
 Just as the 'is.' functions can be used to test whether a vector is of a particular type, R also has another suite of functions, 'as.', that can coerce one data type to become another type:
@@ -96,6 +96,7 @@ as.numeric( vec )
 
 # Values can be converted to character strings
 as.character( c( 1, 2, 3 ) )
+
 # If the precision of a double (a value with decimal places) 
 # is long, converting to a character will retain all decimal 
 # places - here is an example using the built-in 
