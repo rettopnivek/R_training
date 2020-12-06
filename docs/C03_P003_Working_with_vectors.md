@@ -4,12 +4,16 @@ The __atomic vector__ class in R allows for storing multiple values in a single 
 
 Note that indexing in R is very flexible, but sometimes unintuitive, and can produce unintended results without any error messages or warnings.
 
+<a name="TOC"></a>
 ### Table of contents
   
-1. Extracting a subset of values
-2. Conditional indexing
-3. Incorrect indexing
+1. <a href="#S01">Extracting a subset of values</a>
+2. <a href="#S02">Conditional indexing</a>
+3. <a href="#S03">Incorrect indexing</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Extracting a subset of values
 
 R provides a special operator function `[` (i.e., square brackets) to extract specific elements from a vector. This is also known as 'indexing' a vector:
@@ -45,6 +49,9 @@ number_of_pets['Dogs']
 number_of_pets[ c( 'Dogs', 'Fish' ) ]
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Conditional indexing
 
 Users can use conditional logic to isolate a subset of a vector that match desired conditions:
@@ -61,6 +68,9 @@ sel =
 vec[sel]
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Incorrect indexing
 
 Incorrectly indexing a vector will not necessarily result in an error message:
@@ -74,9 +84,13 @@ vec['Ducks']
 # Passing a missing value as an index results in strange behavior
 vec[NA]
 ```
+
+<a href="#TOC">&#129145;</a>
+
+<a name="END"></a>
 Return to:
-[Table of contents](C03_P000_Foundations.md);
+[Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+[Home page](https://rettopnivek.github.io/R_training/)
 
 
