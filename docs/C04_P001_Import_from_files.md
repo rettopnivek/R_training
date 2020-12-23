@@ -33,6 +33,8 @@ load( file = 'Sub_folder/Filename.RData' )
 
 *Note: A useful approach is to write a script to read the raw data in from its original format, process and clean the data, and then save the processed data (e.g., the resulting data frame) as a .RData file. In this way, you preserve the original raw data, but have a cleaned set of data that is particularly easy to read in via R.*
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
 <a name="S02"></a>
 #### 2. Working with .txt files
 
@@ -90,6 +92,8 @@ df_2 <- read.table(
 
 The 'write.table' and 'read.table' commands provide general-purpose functions to read in spreadsheets, and allow the user a high degree of control over aspects such as the delimiter separating columns. R has even more specialized functions for common file types, in particular comma-delimited files.
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
 <a name="S03"></a>
 #### 3. Working with .csv files
 
@@ -116,6 +120,8 @@ df_2 <- read.csv(
   stringsAsFactors = F
 )
 ```
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S04"></a>
 #### 4. Read in .xlsx files
