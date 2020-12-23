@@ -2,12 +2,16 @@
 
 The first step with data processing is to load the data into R's workspace. R provides a large set of options to do so, and extensions exist that allow R to read in data files from other programs, including Excel, SPSS, SAS, and Matlab.
 
+<a name="TOC"></a>
 ### Table of contents
-1. Working with .RData files
-2. Working with .txt files
-3. Working with .csv files
-4. Read in .xlsx files
+1. <a href="#S01">Working with .RData files</a>
+2. <a href="#S02">Working with .txt files</a>
+3. <a href="#S03">Working with .csv files</a>
+4. <a href="#S04">Read in .xlsx files</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Working with .RData files
 
 R allows you to save the user-defined objects present in your current workspace as an '.RData' file, and to easily re-load these files at a later point:
@@ -27,8 +31,9 @@ load( file = 'Filename.RData' )
 load( file = 'Sub_folder/Filename.RData' )
 ```
 
-*Note: A useful approach is to write a script to read the raw data in from its original format, process and clean the data, and then save the processed data (e.g., the resulting data frame) as a .RData file. In this way, you preserve the original raw data, but have a cleaned set of data that is particularly easy to read in via R.'
+*Note: A useful approach is to write a script to read the raw data in from its original format, process and clean the data, and then save the processed data (e.g., the resulting data frame) as a .RData file. In this way, you preserve the original raw data, but have a cleaned set of data that is particularly easy to read in via R.*
 
+<a name="S02"></a>
 #### 2. Working with .txt files
 
 One can create simple text files using R via the 'write' function. A whole new text file can be created (or an old one overwritten), or lines can be added to an existing file. This provides a simple tool to, for example, log the results of a script for debugging purposes.
@@ -85,6 +90,7 @@ df_2 <- read.table(
 
 The 'write.table' and 'read.table' commands provide general-purpose functions to read in spreadsheets, and allow the user a high degree of control over aspects such as the delimiter separating columns. R has even more specialized functions for common file types, in particular comma-delimited files.
 
+<a name="S03"></a>
 #### 3. Working with .csv files
 
 Comma-delimited files (.csv) provide a very easy data format to read in or create, and are especially useful when you need to save data in a format that can be processed by a wide variety of programs. R provides the 'write.csv' and 'read.csv' functions specifically for these type of files. These functions work similarly to 'write.table' and 'read.table', but assume the delimiter is a comma:
@@ -111,6 +117,7 @@ df_2 <- read.csv(
 )
 ```
 
+<a name="S04"></a>
 #### 4. Read in .xlsx files
 
 Excel spreadsheets (i.e., .xls and .xlsx) are a proprietary format, and R can't by default read in these types of files. Fortunately, several R packages exist that resolve this issue. For example, Hadley Wickham's 'readxl' package provides straightforward tools to read in Excel files without requiring any external dependencies:
@@ -139,4 +146,11 @@ df <- read_excel(
 
 ```
 
-[Return to sections](C00_P002_Chapters.md)
+<a href="#TOC">&#129145;</a>
+
+<a name="END"></a>
+Return to:
+[Data processing](C04_P000_Data_processing.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
+
