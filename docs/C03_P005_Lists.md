@@ -2,12 +2,15 @@
 
 The basic data structures in R revolve around vectors for a single data type. In other words, a vector can consist of all numeric values, or all character strings, but not a combination of both. However, the data sets we are interested in analyzing will naturally consist of a diverse set of data types, from numbers to character strings to more complex types like dates and times. R provides a more complicated data structure to allow users to store tables with these diverse data types, known as a __data frame__. However, to understand __data frames__, first we neen to understand __lists__, because just as matrices can be thought of as a collection of vectors, a __data frame__ in turn can be thought of as a collection of __lists__. The __list__ is a structure that allows storing different elements of any form (vectors, matrices, even other __lists__) together as a single object.
 
+<a name="TOC"></a>
 ### Table of contents
-  
-1. Lists
-2. Indexing lists
-3. Working with lists
+1. <a href="#S01">Lists</a>
+2. <a href="#S02">Indexing lists</a>
+3. <a href="#S03">Working with lists</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Lists
 
 Lists are a flexible structure in R that allow combining disparate data types and structures into a single object:
@@ -33,6 +36,9 @@ lst <- list( Numbers = lst_1, Strings = lst_2 )
 
 *Note: In the example above, we have created a 'named' list, by providing a label for each of the sub-lists. These labels can be used for indexing purposes.*
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Indexing lists
 
 Extracting elements from a list can be more complicated than a vector or matrix, because of the internal separation of different data types. The most basic operator for indexing a list is the `[[` (double brackets) operator:
@@ -79,6 +85,9 @@ lst$Level_1$Level_2
 lst$Level_1[[1]]
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Working with lists
 
 Just as it is more complicated indexing lists because of disparate data types, the tools for working with lists (e.g., checking dimensions, adding or removing elements, converting elements, etc.) are also more complicated.
@@ -131,6 +140,11 @@ vec
 
 The `unlist` function is an important tool, because R often will store complex data structures internally as a list, making it easy to accidentally try to use a function meant for vectors or matrices on a list object, resulting in an error message.
 
-[Return to sections](C00_P002_Chapters.md)
+<a href="#TOC">&#129145;</a>
 
+<a name="END"></a>
+Return to:
+[Foundations](C03_P000_Foundations.md)
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
 
