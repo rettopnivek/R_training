@@ -2,12 +2,15 @@
 
 Just as a vector is a set of multiple values, a matrix is a set of multiple vectors. Matrices consist of rows and columns of a single data type. Because of this, they are most useful for underlying mathematical operations rather than storing raw data. When creating new data or expanding an existing set of data, matrices can also be a useful starting point thanks to convenient functions for initializing a new matrix. Furthermore, R's approach for indexing, summarizing, and manipulating matrices can be extended to the more complex data structures better suited for storing raw data.
 
+<a name="TOC"></a>
 ### Table of contents
-  
-1. Creating matrices
-2. Matrix dimensions
-3. Indexing matrices
+1. <a href="#S01">Creating matrices</a>
+2. <a href="#S02">Matrix dimensions</a>
+3. <a href="#S03">Indexing matrices</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Creating matrices
 
 ```R
@@ -36,6 +39,9 @@ M <- matrix( FALSE, 2, 2 )
 M
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Matrix dimensions
 
 R provides a number of convenience functions for determining the dimensions of matrices:
@@ -69,6 +75,9 @@ M <- cbind( 1:3, M, 7:9 )
 M
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Indexing matrices
 
 Extracting values from a matrix is similar to extracting values from a vector, but is complicated by the two-dimensional nature of matrices. Like vectors, the standard operator for indexing a matrix is `[`, but additional consideration is needed for R to know both the rows and columns from which to subset data. The general format to index a matrix involves telling R the row followed by the column, separated by a comma:
@@ -127,9 +136,11 @@ M[,sel]
 # However, M[sel,] does not work, returns an error
 ```
 
-Return to:
-[Table of contents](C03_P000_Foundations.md);
-[Sections](C00_P002_Chapters.md);
-[Title page](https://rettopnivek.github.io/R_training/)
+<a href="#TOC">&#129145;</a>
 
+<a name="END"></a>
+Return to:
+[Foundations](C03_P000_Foundations.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
 
