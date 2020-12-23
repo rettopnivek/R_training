@@ -37,7 +37,12 @@ ex <- 'The "R" project'; ex
 ex <- "The \"R\" project"; ex
 ```
 
-R has predefined constants for the Roman alphabet and for the months
+R has predefined constants for the Roman alphabet and for the months:
+```R
+letters # Lower-case
+LETTERS # Upper-case
+month.name
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
@@ -178,7 +183,7 @@ casefold( 'abc', upper = T )
 
 <a name="END"></a>
 Return to:
-Foundations
+[Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
 [Home page](https://rettopnivek.github.io/R_training/)
 
