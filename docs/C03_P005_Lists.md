@@ -144,7 +144,7 @@ The `unlist` function is an important tool, because R often will store complex d
 
 <a name="END"></a>
 Return to:
-[Foundations](C03_P000_Foundations.md)
+[Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
 [Home page](https://rettopnivek.github.io/R_training/)
 
