@@ -65,7 +65,7 @@ vec[3] <- 'Cat' # Produces a warning and leads to missing data
 ```
 
 Because R by default converts character vectors to factors when creating data frames, users must be careful and understand how factors are representing the raw data. Some common issues you might come across are:
-* Dates represented as strings instead being converted to factors;
+* Dates intended to be represented as strings instead are converted to factors;
 * A typo in a column converts a numeric column into a factor, with subsequent conversions resulting in incorrect numeric values.
 * Trying to add new data to a column can produce errors or missing data due to factors only considering currently defined levels.
 
@@ -181,7 +181,7 @@ is.vector( unlist( vec ) ) # TRUE
 
 <a name="END"></a>
 Return to:
-[Foundations](C03_P000_Foundations.md)
+[Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
 [Home page](https://rettopnivek.github.io/R_training/)
 
