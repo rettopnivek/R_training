@@ -45,7 +45,7 @@ devtools::install_github("github_username/name_of_repository")
 
 By default, even after installing an R package, the data and functions included in this package will not be available for use when you start an R session. You must first load the package into memory, typically via the __library__ command.
 
-*Note: the 'library' comman is so named to allude to how packages are stored in a library that you can access.*
+*Note: the 'library' command is so named to allude to how packages are stored in a library that you can access.*
 
 ```R
 # Load a package in for use
