@@ -2,7 +2,7 @@
 
 To install R, you can go to <https://www.r-project.org/> and click the **download R** link.
 
-![R project webpage](I0008_R_project_download_R.png)
+<img src="I0008_R_project_download_R.png" alt="R project webpage" width="200"/>
 
 Select a CRAN mirror location near you (scroll down to near the bottom for locations in the US). On the next page, select the link corresponding to your operating system.
 
