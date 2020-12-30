@@ -11,5 +11,8 @@ The following sections discuss basic operations and data structures in R that ar
 * [Lists](C03_P005_Lists.md)
 * [Data frames](C03_P006_Data_frames.md)
 * [Character strings](C03_P007_Strings.md)
+* [Conditional statements](C03_P008_Conditional_statements.md)
+* [Loops](C03_P009_Loops.md)
+* [User-defined functions](C03_P010_Custom_functions.md)
 
 [Return to sections](C00_P002_Chapters.md)
