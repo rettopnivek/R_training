@@ -6,8 +6,7 @@ __Data frames__ are the standard structure in which you will see most data store
 ### Table of contents
 1. <a href="#S01">Creating data frames</a>
 2. <a href="#S02">Factors</a>
-2. <a href="#S03">Indexing data frames</a>
-3. <a href="#S04">Working with data frames</a>
+3. <a href="#S03">Indexing data frames</a>
 
 <a href="#END">&#129147;</a>
 
