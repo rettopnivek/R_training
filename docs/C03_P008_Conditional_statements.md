@@ -20,9 +20,9 @@ To make use of conditional statements, we first need to indicate when conditions
 * <a href="#S014">match() or %in%</a>
 
 <a name="S011"></a>
-##### Logical operators
+#### Logical operators
 
-The __== operator__ tests whether the value on the left equals the value on the right:
+The __"=="__ operator tests whether the value on the left equals the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 X == Y # TRUE
@@ -34,7 +34,7 @@ v1 <- 1:3; v2 <- c( 1, 3, 5 )
 v1 == v2 # TRUE FALSE FALSE
 ```
 
-The __!= operator__ tests whether the value on the left does not equal the value on the right:
+The __"!="__ operator tests whether the value on the left does not equal the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 X != Z # TRUE
@@ -46,7 +46,7 @@ v1 <- 1:3; v2 <- c( 1, 3, 5 )
 v1 != v2 # FALSE TRUE TRUE
 ```
 
-The __> operator__ tests whether whether the value on the left is greater than the value on the right:
+The __">"__ operator tests whether whether the value on the left is greater than the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 Z > X # TRUE
@@ -58,7 +58,7 @@ v1 <- 1:3; v2 <- c( 1, 3, 5 )
 v2 > v1 # FALSE TRUE TRUE
 ```
 
-The __>= operator__ tests whether whether the value on the left is greater than or equal to the value on the right:
+The __">="__ operator tests whether whether the value on the left is greater than or equal to the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 Z >= X # TRUE
@@ -70,7 +70,7 @@ v1 <- 1:3; v2 <- c( 1, 3, 5 )
 v2 >= v1 # TRUE TRUE TRUE
 ```
 
-The __< operator__ tests whether whether the value on the left is less than the value on the right:
+The __"<"__ operator tests whether whether the value on the left is less than the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 X < Z # TRUE
@@ -82,7 +82,7 @@ v1 <- 1:3; v2 <- c( 1, 3, 5 )
 v1 < v2 # FALSE TRUE TRUE
 ```
 
-The __<= operator__ tests whether whether the value on the left is less than or equal to the value on the right:
+The __"<="__ operator tests whether whether the value on the left is less than or equal to the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
 X < Z # TRUE
@@ -97,9 +97,9 @@ v1 <= v2 # TRUE TRUE TRUE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S012"></a>
-##### Boolean operations
+#### Boolean operations
 
-The __& operator__ identifies all cases that are true for x AND y:
+The __"&"__ operator identifies all cases that are true for x AND y:
 ```r
 # Define logical vectors
 x <- c( T, T, F )
@@ -107,7 +107,7 @@ y <- c( F, T, F )
 x & y # FALSE TRUE FALSE
 ```
 
-The __| operator__ identifies all cases that are true for x OR y:
+The __"|"__ operator identifies all cases that are true for x OR y:
 ```r
 # Define logical vectors
 x <- c( T, T, F )
@@ -118,7 +118,7 @@ x | y # TRUE TRUE FALSE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S013"></a>
-##### C) any() and all()
+#### any() and all()
 
 The function __any(x)__ returns TRUE if any element of the logical vector x is TRUE:
 ```r
@@ -141,7 +141,7 @@ all( x ) # FALSE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S014"></a>
-##### D) match() or %in%
+#### match() or %in%
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
