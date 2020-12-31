@@ -14,91 +14,129 @@ Conditional statements allow you to run code segments based on whether certain c
 
 To make use of conditional statements, we first need to indicate when conditions are met or not. We can do this using the logical values TRUE or FALSE. R provides a standard suite of tools to generate logical values and conduct boolean operations, both on univariate values and over vectors (and other data types). The following sections review the tools provided in base R.
 
-* A) <a href="#S011">Logical operators</a>
-* B) <a href="#S012">Boolean operations</a>
-* C) <a href="#S013">any() and all()</a>
-* D) <a href="#S014">match() or %in%</a>
+* <a href="#S011">Logical operators</a>
+* <a href="#S012">Boolean operations</a>
+* <a href="#S013">any() and all()</a>
+* <a href="#S014">match() or %in%</a>
 
 <a name="S011"></a>
-##### A) Logical operators
+##### Logical operators
 
+The __== operator__ tests whether the value on the left equals the value on the right:
 ```r
-# Define variables for examples
+X <- 1; Y <- 1; Z <- 2
+X == Y # TRUE
+X == Z # FALSE
 
-# Univariate variables
-x <- 1
-y <- 1
-z <- 2
-# Vectors
-vec1 <- c( 1, 2, 3 )
-vec2 <- c( 1, 3, 5 )
-
-### The "==" operator ###
-
-# Tests if a equals b
-x == y # TRUE
-x == z # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec1 == vec2 # TRUE FALSE FALSE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v1 == v2 # TRUE FALSE FALSE
+```
 
-### The "!=" operator ###
+The __!= operator__ tests whether the value on the left does not equal the value on the right:
+```r
+X <- 1; Y <- 1; Z <- 2
+X != Z # TRUE
+X != Y # FALSE
 
-# Tests if a does not equal b
-x != z # TRUE
-x != y # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec1 != vec2 # FALSE TRUE TRUE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v1 != v2 # FALSE TRUE TRUE
+```
 
-### The ">" operator ###
+The __> operator__ tests whether whether the value on the left is greater than the value on the right:
+```r
+X <- 1; Y <- 1; Z <- 2
+Z > X # TRUE
+X > Y # FALSE
 
-# Tests if a is greater than b
-z > x # TRUE
-x > y # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec2 > vec1 # FALSE TRUE TRUE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v2 > v1 # FALSE TRUE TRUE
+```
 
-### The ">=" operator ###
+The __>= operator__ tests whether whether the value on the left is greater than or equal to the value on the right:
+```r
+X <- 1; Y <- 1; Z <- 2
+Z >= X # TRUE
+X >= Y # TRUE
 
-# Tests if a is greater than or equal to b
-x >= z # TRUE
-x >= y # TRUE
-z >= x # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec2 >= vec1 # TRUE TRUE TRUE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v2 >= v1 # TRUE TRUE TRUE
+```
 
-### The "<" operator ###
+The __< operator__ tests whether whether the value on the left is less than the value on the right:
+```r
+X <- 1; Y <- 1; Z <- 2
+X < Z # TRUE
+X < Y # FALSE
 
-# Tests if a is less than b
-x < y # TRUE
-x < y # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec1 < vec2 # FALSE TRUE TRUE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v1 < v2 # FALSE TRUE TRUE
+```
 
-### The "<=" operator ###
+The __<= operator__ tests whether whether the value on the left is less than or equal to the value on the right:
+```r
+X <- 1; Y <- 1; Z <- 2
+X < Z # TRUE
+X < Y # FALSE
 
-# Tests if a is less than or equal to b
-x <= z # TRUE
-x <= y # TRUE
-z <= x # FALSE
 # Each element in vectors of matching 
 # length are compared to each other
-vec2 <= vec1 # TRUE FALSE FALSE
+v1 <- 1:3; v2 <- c( 1, 3, 5 )
+v1 <= v2 # TRUE TRUE TRUE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S012"></a>
-##### B) Boolean operations
+##### Boolean operations
+
+The __& operator__ identifies all cases that are true for x AND y:
+```r
+# Define logical vectors
+x <- c( T, T, F )
+y <- c( F, T, F )
+x & y # FALSE TRUE FALSE
+```
+
+The __| operator__ identifies all cases that are true for x OR y:
+```r
+# Define logical vectors
+x <- c( T, T, F )
+y <- c( F, T, F )
+x | y # TRUE TRUE FALSE
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S013"></a>
 ##### C) any() and all()
+
+The function __any(x)__ returns TRUE if any element of the logical vector x is TRUE:
+```r
+x <- c( T, F, F )
+any( x ) # TRUE
+
+x <- c( F, F, F )
+any( x ) # FALSE
+```
+
+The function __all(x)__ returns TRUE only when all elements of the logical vector x are TRUE:
+```r
+x <- c( T, T, T )
+all( x ) # TRUE
+
+x <- c( T, F, F )
+all( x ) # FALSE
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
