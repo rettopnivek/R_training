@@ -16,8 +16,8 @@ To make use of conditional statements, we first need to indicate when conditions
 
 * <a href="#S011">Logical operators</a>
 * <a href="#S012">Boolean operations</a>
-* <a href="#S013">any() and all()</a>
-* <a href="#S014">match() or %in%</a>
+* <a href="#S013">Functions any() and all()</a>
+* <a href="#S014">The %in% operator</a>
 
 <a name="S011"></a>
 #### Logical operators
@@ -118,7 +118,9 @@ x | y # TRUE TRUE FALSE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S013"></a>
-#### any() and all()
+#### Functions any() and all()
+
+The functions __any__ and __all__ allow a user to collapse a logical vector down to a single TRUE or FALSE value.
 
 The function __any(x)__ returns TRUE if any element of the logical vector x is TRUE:
 ```r
@@ -141,7 +143,22 @@ all( x ) # FALSE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S014"></a>
-#### match() or %in%
+#### The operator %in%
+
+The operator __%in%__ allow a user to compare vectors of non-equal length and identify elements present in both vectors.
+
+```r
+# Define vectors of unequal length
+v1 <- c( 'A', 'B', 'C' )
+v2 <- c( 'A', 'A', 'D', 'E', 'C' )
+
+# Identify elements in v1 that are also in v2, 
+# even though length(v1) != length(v2)
+v1 %in% v2 # TRUE FALSE TRUE
+
+# Identify elements in v2 that are also in v1
+v2 %in% v1 # TRUE TRUE FALSE FALSE TRUE
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
