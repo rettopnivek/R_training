@@ -110,7 +110,8 @@ cbind( format( vec ) )
 
 # Can control justification as well
 cbind( format( vec, justify = 'right' ) )
-cbind( format( vec, justify = 'centre' ) ) # Note use of British spelling
+# Note use of British spelling
+cbind( format( vec, justify = 'centre' ) )
 
 # Can be used to round numbers to a 
 # specified number of decimals
