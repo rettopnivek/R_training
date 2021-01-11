@@ -8,6 +8,9 @@ Character strings are an important data type. Many data sets will include charac
 2. <a href="#S02">Displaying strings</a>
 3. <a href="#S03">Combining strings</a>
 4. <a href="#S04">Case conversion</a>
+5. <a href="#S05">Character replacement</a>
+6. <a href="#S06">String indexing</a>
+7. <a href="#S07">Abbreviation</a>
 
 <a href="#END">&#129147;</a>
 
@@ -173,6 +176,31 @@ casefold( 'abc', upper = T )
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+
+<a name="S05"></a>
+#### 5. Character replacement
+
+The function __chartr__ can be used to replace individual characters with a new character:
+```R
+# Example string
+x <- "Bats, cats, and hats; All end with 'at'"
+
+# Replace the letter "a"
+chartr( old = "a", new = "-", x )
+
+# Function is case-sensitive
+chartr( old = "A", new = "-", x )
+
+# Function can replace multiple characters independently
+chartr( old = "at", new = "--", x )
+# Any instance of 'a' or 't' is replaced with '-'
+```
+
+*Note: Only use the chartr function when you want all instances of an individual character to be replaced!*
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
 
 ```R
 # Example R code
