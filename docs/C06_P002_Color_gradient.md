@@ -1,4 +1,4 @@
-## Creating a color gradient in R
+## Creating a color gradient
 
 Here is an example of creating a vector of colors that forms a gradient between color A and color B:
 
@@ -22,4 +22,8 @@ display_colors <- function( color_vector ) {
 display_colors( color_vector )
 ```
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[FAQ](C06_P000_FAQ.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
+
