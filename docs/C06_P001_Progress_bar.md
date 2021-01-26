@@ -1,4 +1,4 @@
-## Progress Bars in R
+## Progress Bars
 
 Here is an example of creating a simple text progress bar in R to track the progress of a loop:
 
@@ -20,4 +20,9 @@ rm(pb)
 
 The third style is nice because it also shows the percentage and indicates both the start and end of the progress bar.
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[FAQ](C06_P000_FAQ.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
+
+
