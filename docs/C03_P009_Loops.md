@@ -14,16 +14,16 @@ As with any programming language, R provides several ways automate repeated call
 
 As part of what R labels 'basic control-flow constructs', three ways to implement loops in R are:
 
-* <a href="#S011">A while loop</a>
-* <a href="#S012">A repeat loop</a>
-* <a href="#S013">A for loop</a>
+* <a href="#S011">while</a>
+* <a href="#S012">repeat</a>
+* <a href="#S013">for</a>
 
 *Note: The most common loop you will see used in R is the for loop; the while or repeat loops are far less common.*
 
 As a running example, we will show how all three loop methods can be used to print the numbers 1 to 10 to the console.
 
 <a name="S011"></a>
-#### A while loop
+#### while
 
 A **while** loop, as indicated in the name, repeats an operation or set of operations while a user-specified condition is met. Once the condition tests FALSE instead of TRUE, the loop terminates.
 
@@ -49,7 +49,7 @@ while ( i <= 10 ) { # Condition for continuing
 ```
 
 <a name="S012"></a>
-#### A repeat loop
+#### repeat
 
 A **repeat** loop, as indicated in the name, repeats an operation or set of operations. Unlike the while loop, which requires a user to specify the condition to be met for the loop to continue, a repeat loop does not require any initial specification of condition. Instead, the user can specify the condition to stop the loop as part of the set of operations to run per iteration, using the command **break** to stop the loop once the condition tests TRUE.
 
@@ -79,7 +79,7 @@ repeat {
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S012"></a>
-#### A for loop
+#### for
 
 A **for** loop repeats operations over a specified number of increments. A user specifies a counter variable and the number of values the counter can take, and then for each increment the desired set of operations are run.
 
