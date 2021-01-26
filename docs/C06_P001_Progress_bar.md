@@ -1,4 +1,4 @@
-## Progress Bars
+## Progress bars
 
 Here is an example of creating a simple text progress bar in R to track the progress of a loop:
 
