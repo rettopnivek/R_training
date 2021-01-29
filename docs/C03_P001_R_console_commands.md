@@ -18,7 +18,7 @@ In this section, I provide some simple examples of inputting commands to the R c
 <a name="S01"></a>
 #### 1. Annotations
 
-Preceding any input with the `#` symbol will prevent R from running the input. This provides a simple way to add notes and comments to code, and I use this freqeuntly in the following examples.
+Preceding any input with the `#` symbol will prevent R from running the input. This provides a simple way to add notes and comments to code, and I use this frequently in the following examples.
 
 ```R
 # R will not run this line of text because it is preceded by '#'
