@@ -62,7 +62,7 @@ vec[ vec <= 0 ] # Only values less than or equal to 0
 vec[ ( vec > 1 ) | ( vec < -1 ) ] # Values greater than 1 OR less than 1
 # For complex conditional statements, it can help to define a logical 
 # vector for indexing purposes
-sel = 
+sel <- 
   vec > 1 |
   vec < -1
 vec[sel]
@@ -78,7 +78,7 @@ Incorrectly indexing a vector will not necessarily result in an error message:
 vec <- c( 'Dogs' = 2, 'Cats' = 2, 'Fish' = 0 )
 vec[4]       # Does not produce an error, returns a missing value symbol instead
 vec['Ducks']
-vec = 1:3    # Similar result for non-labeled vector
+vec <- 1:3    # Similar result for non-labeled vector
 vec[4]
 vec['Ducks']
 # Passing a missing value as an index results in strange behavior
