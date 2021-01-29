@@ -6,11 +6,14 @@ Character strings are an important data type. Many data sets will include charac
 ### Table of contents
 1. <a href="#S01">Creating strings</a>
 2. <a href="#S02">Displaying strings</a>
-3. <a href="#S03">Combining strings</a>
-4. <a href="#S04">Case conversion</a>
-5. <a href="#S05">Character replacement</a>
-6. <a href="#S06">String indexing</a>
-7. <a href="#S07">Abbreviation</a>
+3. <a href="#S03">Number of characters in a string</a>
+4. <a href="#S04">String indexing</a>
+5. <a href="#S05">Case conversion</a>
+6. <a href="#S06">Character replacement</a>
+7. <a href="#S07">Abbreviations</a>
+8. <a href="#S08">Combining strings</a>
+9. <a href="#S09">Splitting strings</a>
+10. <a href="#S10">Pattern matching and replacement</a>
 
 <a href="#END">&#129147;</a>
 
@@ -127,31 +130,56 @@ cbind( format( vec, digits = 2 ) )
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S03"></a>
-#### 3. Combine strings
+#### 3. Number of characters in a string
 
-Base R uses the command 'paste' to combine character strings.
+One can determine the total number of characters in a string (including blank spaces), using the function __nchar()__:
 
 ```R
-# By default adds a space between strings
-paste( 'Hello', 'World' )
-# Can define custom separator between strings
-paste( 'Long', 'legged', sep = '-' )
-# To combine with no space
-paste0( 'cat', 'nip' )
-
-# Functions are vectorized
-paste( 'Part', c( '1', '2', '3' ) )
-paste0( c( 'A','B', 'C' ), ')' )
-
-# Can also convert a vector of 
-# strings into a single string
-paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
+x <- 'abcde'
+nchar( x ) # 5
+# Counts blank spaces
+x <- 'Hello world'
+nchar( x ) # 11
+# Works with vectors
+x <- c( 'Hello', 'word' )
+nchar( x ) # 5 5
 ``` 
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S04"></a>
-#### 4. Case conversion
+#### 4. String indexing
+
+Introduction...
+
+```R
+# Example string
+x <- 'ABCD'
+
+# First letter of string
+substring( x, first = 1, last = 1 )
+# Middle 2 letters of string
+substring( x, 2, 3 )
+
+# Replace middle 2 letters of string
+substring( x, 2, 3 ) <- '23'
+print( x )
+
+# 'substr' is an equivalent function 
+# with slightly different argument names
+substr( x, start = 2, stop = 3 )
+print( x )
+
+# Indexing outside number of characters 
+# does not return an error, instead 
+# returns an empty character value
+substr( x, start = 5, stop = 5 )
+```
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S05"></a>
+#### 5. Case conversion
 
 We can convert upper-case letters to lower-case:
 ```R
@@ -177,9 +205,8 @@ casefold( 'abc', upper = T )
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
-
-<a name="S05"></a>
-#### 5. Character replacement
+<a name="S06"></a>
+#### 6. Character replacement
 
 The function __chartr__ can be used to replace individual characters with a new character:
 ```R
@@ -202,11 +229,60 @@ chartr( old = "at", new = "--", x )
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 
+<a name="S07"></a>
+#### 7. Abbreviations
+
 ```R
-# Example R code
+# Example string
+x <- 'Psychology'
+
+# Abbreviate to 4 letters by default
+abbreviate( x )
+# Abbreviate to 5 letters
+abbreviate( x, minlength = 5 )
+
+# Vector of strings
+x <- c( 'Psychology', 'Psychiatry', 'Sociology' )
+
+# Creates unique truncation of each string  
+abbreviate( x )
+
+abbreviate( x, method = 'both.sides' )
 ```
 
-*Note: Advanced content.*
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S08"></a>
+#### 8. Combining strings
+
+Base R uses the command 'paste' to combine character strings.
+
+```R
+# By default adds a space between strings
+paste( 'Hello', 'World' )
+# Can define custom separator between strings
+paste( 'Long', 'legged', sep = '-' )
+# To combine with no space
+paste0( 'cat', 'nip' )
+
+# Functions are vectorized
+paste( 'Part', c( '1', '2', '3' ) )
+paste0( c( 'A','B', 'C' ), ')' )
+
+# Can also convert a vector of 
+# strings into a single string
+paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
+``` 
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S09"></a>
+#### 9. Splitting strings
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S10"></a>
+#### 10. Pattern matching and replacement
 
 <a href="#TOC">&#129145;</a>
 
