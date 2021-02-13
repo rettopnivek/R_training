@@ -21,14 +21,12 @@ Character strings are an important data type. Many data sets will include charac
 #### 1. Creating strings
 
 A string is defined in R using single or double quotes:
-
 ```R
 ex <- "This is a string"; ex
 ex <- 'This is also a string'; ex
 ```
 
 When defining a string, the type of closing quote must match the type of opening quote. Care must be taken when intermixing single and double quotes:
-
 ```R
 # To display single quotes as part of the 
 # string, define string using double quotes
@@ -58,7 +56,6 @@ month.name
 R provides several functions for displaying a string in the console window.
 
 The __print__ command is a generic function that can be used to display a string or vector of strings in the console window:
-
 ```R
 ex <- c( 'Hello', 'world' )
 print( ex ) # Includes numeric indicator for line
@@ -79,7 +76,6 @@ noquote( ex ) # Wrapper for 'print' with quote set to FALSE
 *Note: A generic function is a function that adjusts what it outputs based on the type of input it recieves. For example, the 'print' command will generate different output based on whether the input is a simple string or data frame.*
 
 The __cat__ command combines a set of inputs into a single string and outputs it with minimal processing:
-
 ```R
 cat( 'Hello', 'world' ) # By default separates with space
 cat( 'Lower', '-', 'case', sep = '' ) # Remove space
@@ -100,7 +96,6 @@ cat( ex ) # New line is taken literally
 ```
 
 The __format__ command is a flexible function that provides several different options to produce organized, nice looking output. The __format__ command is especially useful for converting numbers into nicely formatted strings:
-
 ```R
 # By default, equivalent output to 'print'
 format( 'The "R" project' )
@@ -133,7 +128,6 @@ cbind( format( vec, digits = 2 ) )
 #### 3. Number of characters in a string
 
 One can determine the total number of characters in a string (including blank spaces), using the function __nchar()__:
-
 ```R
 x <- 'abcde'
 nchar( x ) # 5
@@ -150,8 +144,7 @@ nchar( x ) # 5 5
 <a name="S04"></a>
 #### 4. String indexing
 
-Introduction...
-
+You can use the function __substring__ (or the similar function __substr__) to extract a subset of a character string based on a user-specified start and end position:
 ```R
 # Example string
 x <- 'ABCD'
@@ -165,7 +158,7 @@ substring( x, 2, 3 )
 substring( x, 2, 3 ) <- '23'
 print( x )
 
-# 'substr' is an equivalent function 
+# 'substr' is a similar function 
 # with slightly different argument names
 substr( x, start = 2, stop = 3 )
 print( x )
@@ -232,6 +225,8 @@ chartr( old = "at", new = "--", x )
 <a name="S07"></a>
 #### 7. Abbreviations
 
+Introduction...
+
 ```R
 # Example string
 x <- 'Psychology'
@@ -278,6 +273,40 @@ paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
 
 <a name="S09"></a>
 #### 9. Splitting strings
+
+We can split a character string into parts that precede and/or follow a specified character or phrase using the function __strsplit__:
+
+```R
+x <- 'Hyphenated-word'
+y <- strsplit( x, split = '-' )
+# Returns list with new character vector
+y[[1]]
+
+# Vectorized
+x <- c( 'A-B', 'C-D-E' )
+y <- strsplit( x, split = '-' )
+y[[1]]
+y[[2]]
+
+# Can split into individual letters
+strsplit( 'ABCD', split = '' )[[1]]
+
+# Can split by phrase
+x <- 'cathatbat'
+strsplit( x, split = 'hat' )[[1]]
+
+# Case-sensitive
+strsplit( 'AaAa', split = 'a' )[[1]]
+strsplit( 'AaAa', split = 'A' )[[1]]
+# Note function returns empty character 
+# if split is at beginning or end of string
+
+# Care must be used with special characters
+# Does not work as expected
+strsplit( 'ABC.abc', split = '.' )[[1]]
+# Use argument 'fixed' for special character
+strsplit( 'ABC.abc', split = '.', fixed = T )[[1]]
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
