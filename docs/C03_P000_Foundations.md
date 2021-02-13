@@ -15,4 +15,6 @@ The following sections discuss basic operations and data structures in R that ar
 * [Loops](C03_P009_Loops.md)
 * [User-defined functions](C03_P010_Custom_functions.md)
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
