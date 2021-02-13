@@ -2,11 +2,15 @@
 
 One of R's primary purposes is for statistical computing. An important first step for statistical analyses is putting together descriptive statistics that summarize your data. R provides a variety of tools to carry this out, and furthermore, there are several R packages that add and/or modify tools.
 
+<a name="TOC"></a>
 ### Table of contents
-1. Summary statistics
-2. Computing summary statistics over multiple variables
-3. Computing summary statistics over grouping factors
+1. <a href="#S01">Summary statistics</a>
+2. <a href="#S02">Computing summary statistics over multiple variables</a>
+3. <a href="#S03">Computing summary statistics over grouping factors</a>
 
+<a href="#END">&#129147;</a>
+
+<a name="S01"></a>
 #### 1. Summary statistics
 
 The most common summary statistics used to summarize data are:
@@ -43,13 +47,15 @@ The median is a subset of the quartiles (i.e., the cut-offs below which 0%, 25%,
 # Default is quartiles
 quantile( x )
 # Can specify percentage for cut-off, such as 5% and 95%
-quantile( x, prob = c( .05, .95 ) ) # Note specified as proportion, not percentage
+# Note specified as proportion, not percentage
+quantile( x, prob = c( .05, .95 ) )
 
 # Inter-quartile range
 iqr <- diff( quantile( x, prob = c( .25, .75 ) ) )
 
 # Trim 5% of trailing data
-cut_offs <- quantile( x, prob = c( .025, .975 ) ) # 5% divided by 2
+# Thresholds set by dividing 5% by 2
+cut_offs <- quantile( x, prob = c( .025, .975 ) )
 trimmed_x <- x[ x > cut_offs[1] & x < cut_offs[2] ]
 ```
 
@@ -65,6 +71,9 @@ harmonic_mean <- function( x ) 1/mean( 1/x ) )
 harmonic_mean( x )
 ```
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S02"></a>
 #### 2. Computing summary statistics over multiple variables
 
 Typically, researchers will have multiple variables that they want to compute summary statistics over, such as age, height, and weight, or gender and racial categories. There are several ways to have R compute statistics over a range of variable, though choices need to be made based on
@@ -100,7 +109,7 @@ apply( df, 2, function(x) round( c( mean(x), median(x), sd(x), 2 ) ) )
 ```
 
 Using base R, you can combine these approaches with the standard methods of indexing to isolate a subset of variables or rows:
-```
+```R
 # Compute the standard deviation for the first 2 variables
 apply( df[,1:2], 2, sd )
 # Compute the median for age and weight
@@ -118,11 +127,19 @@ apply( df[ index, ], 2, mean )
 
 *Note: Combining functions like apply with the base R subsetting tools can often produce dense code. For more options to write intuitive and readable code, check out the R package [dplyr](https://dplyr.tidyverse.org/) by Hadley Wickham.*
 
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S03"></a>
 #### 3. Computing summary statistics over grouping factors
 
 Forthcoming
 
 *Note: Advanced content.*
 
-[Return to sections](C00_P002_Chapters.md)
+<a href="#TOC">&#129145;</a>
 
+<a name="END"></a>
+Return to:
+[Data analysis](C05_P000_Data_analysis.md);
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
