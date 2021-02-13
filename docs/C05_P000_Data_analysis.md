@@ -11,4 +11,6 @@ The following sections discuss and provide examples of a variety of analyses tha
 * Regression
 * Generalized linear models (GLMs)
 
-[Return to sections](C00_P002_Chapters.md)
+Return to:
+[Sections](C00_P002_Chapters.md);
+[Home page](https://rettopnivek.github.io/R_training/)
