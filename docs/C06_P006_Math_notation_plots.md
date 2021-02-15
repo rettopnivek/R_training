@@ -163,7 +163,8 @@ text( xc, yc[24], mtxt, cex = sz )
 <a href="#TOC">&#129145;</a>
 
 <a name="END"></a>
-Return to:[FAQ](C06_P000_FAQ.md);
+Return to:
+[FAQ](C06_P000_FAQ.md);
 [Sections](C00_P002_Chapters.md);
 [Home page](https://rettopnivek.github.io/R_training/)
 
