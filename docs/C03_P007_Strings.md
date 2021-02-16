@@ -13,7 +13,6 @@ Character strings are an important data type. Many data sets will include charac
 7. <a href="#S07">Abbreviations</a>
 8. <a href="#S08">Combining strings</a>
 9. <a href="#S09">Splitting strings</a>
-10. <a href="#S10">Pattern matching and replacement</a>
 
 <a href="#END">&#129147;</a>
 
@@ -221,12 +220,10 @@ chartr( old = "at", new = "--", x )
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
-
 <a name="S07"></a>
 #### 7. Abbreviations
 
-Introduction...
-
+R provides a function that will take a vector of strings and abbreviate them in a manner that ensures each individual string remains unique (This can be helpful, for example, when plotting or labeling anything with long strings):
 ```R
 # Example string
 x <- 'Psychology'
@@ -242,6 +239,9 @@ x <- c( 'Psychology', 'Psychiatry', 'Sociology' )
 # Creates unique truncation of each string  
 abbreviate( x )
 
+# By default, proceeds iteratively from 
+# beginning to end, but can specify 
+# alternative method
 abbreviate( x, method = 'both.sides' )
 ```
 
@@ -251,7 +251,6 @@ abbreviate( x, method = 'both.sides' )
 #### 8. Combining strings
 
 Base R uses the command 'paste' to combine character strings.
-
 ```R
 # By default adds a space between strings
 paste( 'Hello', 'World' )
@@ -275,7 +274,6 @@ paste( c( 'The', 'quick', 'brown', 'fox' ), collapse = ' ' )
 #### 9. Splitting strings
 
 We can split a character string into parts that precede and/or follow a specified character or phrase using the function __strsplit__:
-
 ```R
 x <- 'Hyphenated-word'
 y <- strsplit( x, split = '-' )
@@ -308,11 +306,6 @@ strsplit( 'ABC.abc', split = '.' )[[1]]
 strsplit( 'ABC.abc', split = '.', fixed = T )[[1]]
 ```
 
-<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
-
-<a name="S10"></a>
-#### 10. Pattern matching and replacement
-
 <a href="#TOC">&#129145;</a>
 
 <a name="END"></a>
@@ -320,6 +313,4 @@ Return to:
 [Foundations](C03_P000_Foundations.md);
 [Sections](C00_P002_Chapters.md);
 [Home page](https://rettopnivek.github.io/R_training/)
-
-
 
