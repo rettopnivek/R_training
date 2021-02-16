@@ -1,11 +1,11 @@
 ## Conditional statements
 
-Conditional statements allow you to run code segments based on whether certain conditions are true or false.
+Conditional statements allow you to run code segments based on whether certain conditions are true or false. They allow you to choose what code you want (or need) to run at a given point, and are part of what R calls 'basic control-flow constructs'. Conditional statements involve the evaluation of logical values, so it is useful to also review operations with logical values.
 
 <a name="TOC"></a>
 ### Table of contents
 1. <a href="#S01">Working with logical values</a>
-2. <a href="#S02">More sections</a>
+2. <a href="#S02">Control-flow constructs</a>
 
 <a href="#END">&#129147;</a>
 
@@ -163,20 +163,105 @@ v2 %in% v1 # TRUE TRUE FALSE FALSE TRUE
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S02"></a>
-#### 2. The "if" statement
+#### 2. Control-flow constructs
 
-Content.
+Conditional statements are one of two primary types of control-flow constructs. A conditional statement checks if a condition is met, and if it evaluates to TRUE, runs a code segment. There are four methods of implementing a conditional statement:
 
-```R
-# Example R code
+* <a href="#S021">if ...</a>
+* <a href="#S022">if ... else ...</a>
+* <a href="#S023">ifelse()</a>
+* <a href="#S024">switch()</a>
+
+<a name="S021"></a>
+#### if ...
+
+The general template for the simplest conditional statement 'if' is:
+```
+if (<condition is TRUE>) {
+  <Do something>
+}
 ```
 
-*Note: Advanced content.*
+Specific examples:
+```R
+# If statement is true, outputs text to console
+cond <- TRUE
+if ( cond ) {
+  print( 'Hello' )
+  print( 'World' )
+}
+
+# For a single call, brackets can be excluded
+if ( cond )
+  print( 'Hello world' )
+
+# If evaluates to FALSE, no output
+if (!cond)
+  print( 'Hello world' )
+
+# Only first value in logical value 
+# is evaluated
+vec <- c( T, F, F ) # Returns warning
+if ( vec )
+  print( 'Hello world' )
+
+# Use 'any' or 'all' for vectors
+if ( any( vec ) ) # TRUE
+  print( 'Hello world' )
+if ( all( vec ) ) # FALSE
+  print( 'Hello world' )
+```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
-<a name="S02"></a>
-#### 2. More sections
+<a name="S022"></a>
+#### if ... else ...
+
+Introduction:
+```
+if (<condition is TRUE>) {
+  <Do something>
+} else {
+  >Do something else>
+}
+```
+
+Specific examples:
+```R
+# Examples
+```
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S023"></a>
+#### ifelse()
+
+Introduction:
+```
+ifelse( <logical vector>, <output if TRUE>, <output if FALSE> )
+```
+
+Specific examples:
+```R
+# Examples
+```
+
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S024"></a>
+#### switch
+
+Introduction:
+```
+???
+```
+
+Specific examples:
+```R
+# Examples
+```
+
+*Note: Advanced content.*
 
 <a href="#TOC">&#129145;</a>
 
