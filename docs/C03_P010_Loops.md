@@ -114,6 +114,12 @@ for ( i in 1:10 ) {
 
 <a href="#TOC">&#129145;</a>
 
+#### To do
+
+* Add section detailing speed issues with loops
+* Add section detailing vectorization
+* Add section for 'apply' based functions
+
 <a name="END"></a>
 Return to:
 [Foundations](C03_P000_Foundations.md);
