@@ -1,11 +1,11 @@
-## Title
+## Matching/Replacing Strings
 
 Introduction
 
 <a name="TOC"></a>
 ### Table of contents
-1. <a href="#S01">Sections</a>
-2. <a href="#S02">More sections</a>
+1. <a href="#S01">Regular expressions</a>
+2. <a href="#S02">Base functions for pattern matching/replacement</a>
 
 <a href="#END">&#129147;</a>
 
@@ -24,6 +24,11 @@ Content.
 
 <a name="S02"></a>
 #### 2. More sections
+
+* grep
+* grepl
+* sub
+* gsub
 
 <a href="#TOC">&#129145;</a>
 
