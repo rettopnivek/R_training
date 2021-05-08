@@ -184,15 +184,15 @@ if (<condition is TRUE>) {
 
 Specific examples:
 ```R
-# If statement is true, outputs text to console
+# If condition is true, outputs text to console
 cond <- TRUE
-if ( cond ) {
+if (cond) {
   print( 'Hello' )
   print( 'World' )
 }
 
 # For a single call, brackets can be excluded
-if ( cond )
+if (cond)
   print( 'Hello world' )
 
 # If evaluates to FALSE, no output
@@ -202,7 +202,7 @@ if (!cond)
 # Only first value in logical value 
 # is evaluated
 vec <- c( T, F, F ) # Returns warning
-if ( vec )
+if (vec)
   print( 'Hello world' )
 
 # Use 'any' or 'all' for vectors
@@ -217,18 +217,35 @@ if ( all( vec ) ) # FALSE
 <a name="S022"></a>
 #### if ... else ...
 
-Introduction:
+The general template for extending an __if__ statement with an additional __else__ statement is:
 ```
 if (<condition is TRUE>) {
   <Do something>
 } else {
-  >Do something else>
+  <Do something else>
 }
 ```
 
 Specific examples:
 ```R
-# Examples
+# If condition is TRUE, outputs first statement
+cond <- TRUE
+if (cond) {
+  print('1st')
+  print('  statement')
+} else {
+  print('2nd')
+  print('  statement')
+}
+
+# If condition is FALES, outputs second statement
+if (!cond) {
+  print('1st')
+  print('  statement')
+} else {
+  print('2nd')
+  print('  statement')
+}
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -236,14 +253,19 @@ Specific examples:
 <a name="S023"></a>
 #### ifelse()
 
-Introduction:
+The __ifelse__ function adapts the __if__ and __else__ combination to vectors. The general template for the function call is:
 ```
 ifelse( <logical vector>, <output if TRUE>, <output if FALSE> )
 ```
 
 Specific examples:
 ```R
-# Examples
+# Define logical vector
+vec <- c( TRUE, FALSE, FALSE )
+# Return a character vector with elements equal to:
+# 'A' when 'vec' is TRUE and
+# 'B' when 'vec' is FALSE
+ifelse( vec, 'A', 'B' )
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -253,12 +275,33 @@ Specific examples:
 
 Introduction:
 ```
-???
+# Using numbers to index positions
+switch(
+  <number from 1 onwards>,
+  <output when number == 1>,
+  <output when number == 2>,
+  <etc.>
+)
+
+# Using character strings as labels
+switch(
+  <Character string that matches labels exactly>,
+  <Label 1> = <output>,
+  <Label 2> = <other output>,
+  <etc.>
+)
 ```
 
 Specific examples:
 ```R
 # Examples
+input <- 1
+switch(
+  input,
+  'A',
+  'B',
+  'C'
+)
 ```
 
 *Note: Advanced content.*
