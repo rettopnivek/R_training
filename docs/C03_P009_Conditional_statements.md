@@ -313,7 +313,7 @@ ifelse( vec, list( 1:3 ), 4 ) # 1:3 is returned
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S024"></a>
-#### switch
+#### switch()
 
 The function __switch__ compares an input value against an internal set of labels - if a match is found, __switch__ returns the output the user has associated with the internal label. Labels can be either a) numbers starting from 1 onwards, or b) character strings. The general template is:
 ```
