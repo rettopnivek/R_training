@@ -199,10 +199,10 @@ if (cond)
 if (!cond)
   print( 'Hello world' )
 
-# Only first value in logical value 
+# Only first value in logical vector 
 # is evaluated
-vec <- c( T, F, F ) # Returns warning
-if (vec)
+vec <- c( T, F, F ) 
+if (vec) # Returns warning
   print( 'Hello world' )
 
 # Use 'any' or 'all' for vectors
@@ -246,6 +246,18 @@ if (!cond) {
   print('2nd')
   print('  statement')
 }
+
+# Only first value in logical 
+# vector is evaluated
+vec <- c( T, F, F ) 
+if (vec) # Returns warning
+  print( 'A' ) else print( 'B' )
+
+# Use 'any' or 'all' for vectors
+if ( any( vec ) ) # TRUE
+  print( 'A' ) else print( 'B' )
+if ( all( vec ) ) # FALSE
+  print( 'A' ) else print( 'B' )
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -266,14 +278,44 @@ vec <- c( TRUE, FALSE, FALSE )
 # 'A' when 'vec' is TRUE and
 # 'B' when 'vec' is FALSE
 ifelse( vec, 'A', 'B' )
+
+# Type of output depends
+# on data type of options 
+# and what is returned
+
+# If options are same data 
+# type then returns vector 
+# of same data type
+ifelse( vec, 1, 2 ) # Numeric vector
+
+# If data types are different 
+# for options then returns most 
+# flexible data type
+ifelse( vec, 1, 'A' ) # Character vector
+
+# However, if only one option 
+# is returned, then depends 
+# what is selected
+ifelse( c( T, T, T ), 1, 'A' ) # Numeric vector
+
+# If one option is a vector of 
+# multiple elements, only first 
+# element is returned
+ifelse( vec, 1:3, 4 ) # Only 1 is returned
+
+# Multiple elements can be returned 
+# by using lists
+ifelse( vec, list( 1:3 ), 4 ) # 1:3 is returned
 ```
+
+*Note: The __ifelse__ function strips attributes of an object, and this can result in unexpected output - for example, using __ifelse__ with dates will convert the output to integers, which is unlikely to be useful for the standard user.*
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S024"></a>
 #### switch
 
-Introduction:
+The function __switch__ compares an input value against an internal set of labels - if a match is found, __switch__ returns the output the user has associated with the internal label. Labels can be either a) numbers starting from 1 onwards, or b) character strings. The general template is:
 ```
 # Using numbers to index positions
 switch(
@@ -294,13 +336,22 @@ switch(
 
 Specific examples:
 ```R
-# Examples
+# Integer inputs
 input <- 1
 switch(
   input,
   'A',
   'B',
   'C'
+)
+
+# Character strings
+input <- 'Label_2'
+switch(
+  input,
+  Label_1 = 'A',
+  Label_2 = 'B',
+  Label_3 = 'C'
 )
 ```
 
