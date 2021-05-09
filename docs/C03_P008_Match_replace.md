@@ -125,13 +125,61 @@ gsub( "a", "1", x, ignore.case = TRUE )
 <a name="S02"></a>
 #### 2. Regular expressions
 
-Content.
+* <a href="#S021">Motivating example</a>
+* <a href="#S022">Forthcoming</a>
 
+Regular expressions provide syntax to allow a user to search for various combinations of letters, digits, and special characters. The syntax is flexible, and allows much more complicated groupings and combinations then shown in previous examples. Regular expressions work with a variety of R functions, including __grep__, __grepl__, __sub___, __gsub__, and __strsplit__.
+
+
+<a name="S021"></a>
+#### Motivating example
+
+Here is an example highlighting how regular expressions provide a user with a more concise, simple way to find complicated patterns of strings:
 ```R
-# Example R code
+# Goal: Extract all elements of a 
+# character vector with the digits
+# 1, 2, or 3, irrespective of order
+
+x <- c( 
+  # Different orders of 1, 2, and 3
+  "123", "321", "231", 
+  # 1, 2, and 3 combined with other digits
+  "152536", 
+  # Missing some cases and also combined 
+  # with other digits
+  "14", "25", "36"
+)
+
+# Doesn't work
+grep( '123', x, value = TRUE )
+# [1] "123"
+
+# Works, but requires extended code 
+# with multiple calls
+entries <- 
+  grepl( '1', x ) | 
+  grepl( '2', x ) | 
+  grepl( '3', x )
+x[ entries ]
+# [1] "123" "321" "231" "152536" "14" "25" "36"
+
+# Regular expressions allow 
+# concise, simple call
+grep( '[:1-3:]', x, value = TRUE )
+# [1] "123" "321" "231" "152536" "14" "25" "36"
 ```
 
-*Note: Advanced content.*
+<a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
+
+<a name="S022"></a>
+#### Forthcoming
+
+Introduction.
+```R
+# Example
+```
+
+*Note: Advance content.*
 
 <a href="#TOC">&#129145;</a>
 
