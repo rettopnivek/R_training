@@ -26,7 +26,7 @@ Introduction.
 
 Introduction:
 ```R
-# Example character vector
+# Create example character vector
 x <- c( "ABC", "abc", "CBA", "cba" )
 
 # Match all strings with the 
@@ -47,8 +47,8 @@ grep( "b", x, value = TRUE )
 grep( "ba", x, value = TRUE )
 # [1] "cba"
 
-# Argument to make case-insensitive
-grep( 'a', x, ignore.case = TRUE )
+# To make case-insensitive
+grep( "a", x, ignore.case = TRUE )
 # [1] 1 2 3 4
 ```
 
@@ -67,13 +67,13 @@ x <- c( "ABC", "abc", "CBA", "cba" )
 # length to 'x', equal to 
 # TRUE for matches
 # (Case-sensitive)
-grepl( 'A', x )
+grepl( "A", x )
 # [1] TRUE FALSE TRUE FALSE
-grepl( 'CB', x )
+grepl( "CB", x )
 # [1] FALSE FALSE TRUE FALSE
 
 # Argument to make case-insensitive
-grepl( 'a', x, ignore.case = TRUE )
+grepl( "a", x, ignore.case = TRUE )
 # [1] TRUE TRUE TRUE TRUE
 ```
 
@@ -85,7 +85,17 @@ grepl( 'a', x, ignore.case = TRUE )
 
 Introduction:
 ```R
-# Example
+# Create example character vector
+x <- c( "abc", "ABC", "aabb", "AABB" )
+
+# Replaces 'a' with '1' for 
+# first match (case-sensitive)
+sub( "a", "1", x )
+# [1] "1bc"  "ABC"  "1abb" "AABB"
+
+# To make case-insensitive
+sub( "a", "1", x, ignore.case = TRUE )
+# [1] "1bc"  "1BC"  "1abb" "1ABB"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -96,7 +106,17 @@ Introduction:
 
 Introduction:
 ```R
-# Example
+# Create example character vector
+x <- c( "abc", "ABC", "aabb", "AABB" )
+
+# Replaces 'a' with '1' for 
+# all matches (case-sensitive)
+gsub( "a", "1", x )
+# [1] "1bc"  "ABC"  "11bb" "AABB"
+
+# To make case-insensitive
+gsub( "a", "1", x, ignore.case = TRUE )
+# [1] "1bc"  "1BC"  "11bb" "11BB"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
