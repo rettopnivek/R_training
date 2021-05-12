@@ -1,9 +1,4 @@
 theme: jekyll-theme-tactile
 
-title: Using R
-description: Tutorials and Examples
-
-navbar-links:
-  Home page: "https://rettopnivek.github.io/R_training/"
-  Sections: "https://rettopnivek.github.io/R_training/docs/C00_P002_Chapters/"
-  Author's home: "https://rettopnivek.github.io"
+title: [Using R]
+description: [Tutorials and examples for the applied R user]
