@@ -1,4 +1,4 @@
-### Sections
+## Sections
 
 * [Prerequisites](C01_P000_Prerequisites.md)
 * [RStudio](C02_P000_RStudio.md)
