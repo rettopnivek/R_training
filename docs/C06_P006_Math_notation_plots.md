@@ -22,7 +22,7 @@ mtxt <- expression(
   y[i] == beta[0] + beta[1]*x[i] + beta[2]*x[i]^2 + epsilon[i]
 )
 # Add to figure
-text( .05, .85, mtxt, pos = 4, cex = 1.75 )
+text( 0, .85, mtxt, pos = 4, cex = 1.75 )
 
 # Combining regular text and equations
 # via 'expression', 'paste', and 'plotmath'
@@ -33,7 +33,7 @@ mtxt <- expression(
   )
 )
 # Add to figure
-text( .05, .5, mtxt, pos = 4, cex = 1.75 )
+text( 0, .5, mtxt, pos = 4, cex = 1.75 )
 
 # Sustituting values from a variable via 
 # 'substitute' and 'plotmath'
@@ -43,8 +43,10 @@ mtxt <- substitute(
   list( b_0 = vec[1], b_1 = vec[2], b_2 = vec[3] )
 )
 # Add to figure
-text( .05, .15, mtxt, pos = 4, cex = 1.75 )
+text( 0, .15, mtxt, pos = 4, cex = 1.75 )
 ```
+
+![Math in a figure](I0011_math_and_plots.png)
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
@@ -72,6 +74,8 @@ mtxt <- c(
 axis( 1, c( .25, .5, .75 ), mtxt, cex.axis = 1.5, tick = F )
 ```
 
+![Math in the axes](I0012_math_and_plots_axes.png)
+
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S03"></a>
@@ -80,85 +84,53 @@ axis( 1, c( .25, .5, .75 ), mtxt, cex.axis = 1.5, tick = F )
 Content.
 
 ```R
+# Greek alphabet
+
+greek_alphabet <- list(
+  # Column 1
+  expression( list( Alpha, alpha ) ),
+  expression( list( Beta, beta ) ),
+  expression( list( Gamma, gamma ) ),
+  expression( list( Delta, delta ) ),
+  expression( list( Epsilon, epsilon ) ),
+  expression( list( Zeta, zeta ) ),
+  expression( list( Eta, eta ) ),
+  expression( list( Theta, theta ) ),
+  # Column 2
+  expression( list( Iota, iota ) ),
+  expression( list( Lambda, lambda ) ),
+  expression( list( Kappa, kappa ) ),
+  expression( list( Mu, mu ) ),
+  expression( list( Nu, nu ) ),
+  expression( list( Xi, xi ) ),
+  expression( list( Omicron, omicron ) ),
+  expression( list( Pi, pi ) ),
+  # Column 3
+  expression( list( Rho, rho ) ),
+  expression( list( Sigma, sigma ) ),
+  expression( list( Tau, tau ) ),
+  expression( list( Upsilon, upsilon ) ),
+  expression( list( Phi, phi ) ),
+  expression( list( Chi, chi ) ),
+  expression( list( Psi, psi ) ),
+  expression( list( Omega, omega ) )
+)
+
 # x-axis coordinate
-xc <- .95
+xc <- rep( c(.2,.5,.8), each = 8 )
 # y-axis coordinates
-yc <- seq( 1, 0, length.out = 24 )
+yc <- rep( seq( 1, 0, length.out = 8 ), 3 )
 # Text size
 sz <- 1.3
 
-mtxt <- expression( list( Alpha, alpha ) )
-text( xc, yc[1], mtxt, cex = sz )
-
-mtxt <- expression( list( Beta, beta ) )
-text( xc, yc[2], mtxt, cex = sz )
-
-mtxt <- expression( list( Gamma, gamma ) )
-text( xc, yc[3], mtxt, cex = sz )
-
-mtxt <- expression( list( Delta, delta ) )
-text( xc, yc[4], mtxt, cex = sz )
-
-mtxt <- expression( list( Epsilon, epsilon ) )
-text( xc, yc[5], mtxt, cex = sz )
-
-mtxt <- expression( list( Zeta, zeta ) )
-text( xc, yc[6], mtxt, cex = sz )
-
-mtxt <- expression( list( Eta, eta ) )
-text( xc, yc[7], mtxt, cex = sz )
-
-mtxt <- expression( list( Theta, theta ) )
-text( xc, yc[8], mtxt, cex = sz )
-
-mtxt <- expression( list( Iota, iota ) )
-text( xc, yc[9], mtxt, cex = sz )
-
-mtxt <- expression( list( Lambda, lambda ) )
-text( xc, yc[10], mtxt, cex = sz )
-
-mtxt <- expression( list( Kappa, kappa ) )
-text( xc, yc[11], mtxt, cex = sz )
-
-mtxt <- expression( list( Mu, mu ) )
-text( xc, yc[12], mtxt, cex = sz )
-
-mtxt <- expression( list( Nu, nu ) )
-text( xc, yc[13], mtxt, cex = sz )
-
-mtxt <- expression( list( Xi, xi ) )
-text( xc, yc[14], mtxt, cex = sz )
-
-mtxt <- expression( list( Omicron, omicron ) )
-text( xc, yc[15], mtxt, cex = sz )
-
-mtxt <- expression( list( Pi, pi ) )
-text( xc, yc[16], mtxt, cex = sz )
-
-mtxt <- expression( list( Rho, rho ) )
-text( xc, yc[17], mtxt, cex = sz )
-
-mtxt <- expression( list( Sigma, sigma ) )
-text( xc, yc[18], mtxt, cex = sz )
-
-mtxt <- expression( list( Tau, tau ) )
-text( xc, yc[19], mtxt, cex = sz )
-
-mtxt <- expression( list( Upsilon, upsilon ) )
-text( xc, yc[20], mtxt, cex = sz )
-
-mtxt <- expression( list( Phi, phi ) )
-text( xc, yc[21], mtxt, cex = sz )
-
-mtxt <- expression( list( Chi, chi ) )
-text( xc, yc[22], mtxt, cex = sz )
-
-mtxt <- expression( list( Psi, psi ) )
-text( xc, yc[23], mtxt, cex = sz )
-
-mtxt <- expression( list( Omega, omega ) )
-text( xc, yc[24], mtxt, cex = sz )
+for ( i in 1:24 ) {
+  text( xc[i], yc[i], greek_alphabet[[i]], cex = sz )
+}
+axis( 3, c(.2,.5,.8), paste0( 'Column ', 1:3 ), 
+      tick = F, line = -.5 )
 ```
+
+![Greek alphabet](I0013_greek_letters.png)
 
 <a href="#TOC">&#129145;</a>
 
