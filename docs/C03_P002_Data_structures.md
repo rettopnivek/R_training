@@ -88,6 +88,7 @@ You can also easily determine how many elements are in a vector:
 ```R
 vec <- seq( 1, 10, .33 )
 length( vec )
+#> [1] 28
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
