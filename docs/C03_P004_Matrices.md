@@ -32,7 +32,8 @@ M # Note matrix is filled COLUMNS first
 M <- matrix( 1:3, 3, 3, byrow = TRUE )
 M
 
-# Matrices can consist of characters or logical values as well
+# Matrices can consist of characters or 
+# logical values as well
 M <- matrix( 'Hello', 2, 2 )
 M
 M <- matrix( FALSE, 2, 2 )
