@@ -49,9 +49,13 @@ lst[[3]] # Last element
 ```
 
 A useful technique with lists is to label the elements being stored, to create the aforementioned 'named' list. By labeling the elements of the list, R provides more flexible indexing options. In particular, you can use a new type of indexing operator, the `$` (dollar sign), to extract named elements:
-```
+```R
 # Create named list
-lst <- list( Nmb = 1:3, Str = c( 'Dog', 'Cat', 'Mouse' ), Lgc = TRUE )
+lst <- list( 
+  Nmb = 1:3, 
+  Str = c( 'Dog', 'Cat', 'Mouse' ), 
+  Lgc = TRUE
+)
 lst[[ 'Str' ]] # Using '[[' operator
 lst$Str # Using '$' operator
 ```
@@ -103,9 +107,14 @@ sapply( lst, length )
 
 # Nested list with differing number of elements across 
 # and within levels
-lst <- list( Level_1 = list( 1:3, 1:2, 1 ), Level_2 = list( 1 ) )
-length( lst ) # Only returns number of outermost elements
-sapply( lst, length ) # Returns number of nested lists
+lst <- list( 
+  Level_1 = list( 1:3, 1:2, 1 ), 
+  Level_2 = list( 1 )
+)
+# Only returns number of outermost elements
+length( lst )
+# Returns number of nested lists
+sapply( lst, length )
 ```
 
 R provides flexible means of adding or removing elements to a list:
