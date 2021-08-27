@@ -21,7 +21,8 @@ In this section, I provide some simple examples of inputting commands to the R c
 Preceding any input with the `#` symbol will prevent R from running the input. This provides a simple way to add notes and comments to code, and I use this frequently in the following examples.
 
 ```R
-# R will not run this line of text because it is preceded by '#'
+# R will not run these lines of text 
+# because they are preceded by '#'
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -114,17 +115,24 @@ These variable names will NOT work:
 
 Assigning a value to a variable:
 ```R
-a <- 2  # Best practice approach
-a = 2   # Equivalent, but can be easily confused with another R command '=='
-a       # Displays value assigned to variable
+# Best practice approach
+a <- 2
+# Equivalent, but can be easily confused 
+ #with another R command '=='
+a = 2 
+# Displays value assigned to variable
+a
+#> [1] 2
 ```
 
 Assigning values to variables allows for basic algebra:
 ```R
-a <- 4; b <- 2; x <- 0.5; # Semi-colon separates multiple commands
+# Semi-colon separates multiple commands
+a <- 4; b <- 2; x <- 0.5;
 y <- a + b*x # Save output
 y
-# Output y must be updated if one of inputs is changed
+# Output y must be updated if one 
+# of inputs is changed
 a <- 10
 y # Output is unchanged
 y <- a + b*x # Update output
