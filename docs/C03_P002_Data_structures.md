@@ -181,7 +181,8 @@ We can also generate vectors consisting of sequences of values using the operato
 
 A more flexiable function is `seq`, which allows us to specify starting and ending values, and either the increment or number of desired elements in the vector:
 ```R
-# Sequence starting from 2, ending at 10, in 2-unit increments
+# Sequence starting from 2, ending at 10, 
+# in 2-unit increments
 seq( 2, 10, 2 )
 #> [1]  2  4  6  8 10
 # Reverse sequence
