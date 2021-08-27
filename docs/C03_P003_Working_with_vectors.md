@@ -44,7 +44,9 @@ vec[ index ]
 In a more complicated example, one can label each element in a vector, and then use the labels to extract specific elements:
 ```R
 # Create a vector with named/labeled elements
-number_of_pets <- c( 'Dogs' = 2, 'Ferrets' = 1, 'Fish' = 2 )
+number_of_pets <- c( 
+  'Dogs' = 2, 'Ferrets' = 1, 'Fish' = 2
+)
 number_of_pets['Dogs']
 number_of_pets[ c( 'Dogs', 'Fish' ) ]
 ```
@@ -56,11 +58,16 @@ number_of_pets[ c( 'Dogs', 'Fish' ) ]
 
 Users can use conditional logic to isolate a subset of a vector that match desired conditions:
 ```R
-vec <- -2:2 # Range of values
-vec[ vec > 0 ] # Only values above 0
-vec[ vec <= 0 ] # Only values less than or equal to 0
-vec[ ( vec > 1 ) | ( vec < -1 ) ] # Values greater than 1 OR less than 1
-# For complex conditional statements, it can help to define a logical 
+# Range of values
+vec <- -2:2
+# Only values above 0
+vec[ vec > 0 ]
+# Only values less than or equal to 0
+vec[ vec <= 0 ]
+# Values greater than 1 OR less than 1
+vec[ ( vec > 1 ) | ( vec < -1 ) ]
+# For complex conditional statements, 
+# it can help to define a logical 
 # vector for indexing purposes
 sel <- 
   vec > 1 |
@@ -76,12 +83,16 @@ vec[sel]
 Incorrectly indexing a vector will not necessarily result in an error message:
 ```R
 vec <- c( 'Dogs' = 2, 'Cats' = 2, 'Fish' = 0 )
-vec[4]       # Does not produce an error, returns a missing value symbol instead
-vec['Ducks']
-vec <- 1:3    # Similar result for non-labeled vector
+# Does not produce an error, returns a 
+# missing value symbol instead
 vec[4]
 vec['Ducks']
-# Passing a missing value as an index results in strange behavior
+# Similar result for non-labeled vector
+vec <- 1:3
+vec[4]
+vec['Ducks']
+# Passing a missing value as an index 
+# results in strange behavior
 vec[NA]
 ```
 
