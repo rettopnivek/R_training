@@ -35,7 +35,9 @@ For more flexibility in installing packages (e.g., installing packages available
 # First install the 'devtools' package
 install.packages("devtools")
 # Install a package available on Github
-devtools::install_github("github_username/name_of_repository")
+devtools::install_github(
+  "github_username/name_of_repository"
+)
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -56,9 +58,12 @@ library( package_name ) # Will also work
 
 There are some additional commands that can be helpful:
 ```R
-.libPaths() # Get location on computer where packages are installed
-library()   # See all packages installed
-search()    # See packages currently loaded
+# Get location on computer where packages are installed
+.libPaths()
+# See all packages installed
+library()
+# See packages currently loaded
+search()
 ```
 
 *Note: it is possible to access a function from a package without loading the package first, via the '::' notation. If you have the function 'foo' which is part of an already installed package 'pck', the command 'pck::foo()' will allow you to run the function.*
