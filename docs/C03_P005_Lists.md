@@ -29,8 +29,8 @@ lst <- list( vec_1, vec_2, mat_1 )
 
 Lists can also store other lists, allowing for the creation of nested or hierarchical structures:
 ```R
-lst_1 = list( 1:3 )
-lst_2 = list( c( 'Dog', 'Cat', 'Mouse' ) )
+lst_1 <- list( 1:3 )
+lst_2 <- list( c( 'Dog', 'Cat', 'Mouse' ) )
 lst <- list( Numbers = lst_1, Strings = lst_2 )
 ```
 
@@ -45,7 +45,9 @@ Extracting elements from a list can be more complicated than a vector or matrix,
 ```R
 lst <- list( 1, 'Cat', TRUE )
 lst[[1]] # First element
+#> [1] 1
 lst[[3]] # Last element
+#> [1] TRUE
 ```
 
 A useful technique with lists is to label the elements being stored, to create the aforementioned 'named' list. By labeling the elements of the list, R provides more flexible indexing options. In particular, you can use a new type of indexing operator, the `$` (dollar sign), to extract named elements:
@@ -57,7 +59,9 @@ lst <- list(
   Lgc = TRUE
 )
 lst[[ 'Str' ]] # Using '[[' operator
+#> [1] "Dog"   "Cat"   "Mouse"
 lst$Str # Using '$' operator
+#> [1] "Dog"   "Cat"   "Mouse"
 ```
 
 If you have stored a vector or matrix (As an example) in a list, once you access that element in the list, you can further index the vector or matrix in question:
@@ -66,17 +70,35 @@ lst <- list( V = 1:4, M = matrix( 1:4, 2, 2 ) )
 
 # Index vector
 lst[[1]]; lst[['V']]; lst$V
+#> [1] 1 2 3 4
+#> [1] 1 2 3 4
+#> [1] 1 2 3 4
 # Index 2nd element in vector stored in list
 lst[[1]][2]
+#> [1] 2
 lst[['V']][2]
+#> [1] 2
 lst$V[2]
+#> [1] 2
 
 # Index matrix
 lst[[2]]; lst[['M']]; lst$M
+#>      [,1] [,2]
+#> [1,]    1    3
+#> [2,]    2    4
+#>      [,1] [,2]
+#> [1,]    1    3
+#> [2,]    2    4
+#>      [,1] [,2]
+#> [1,]    1    3
+#> [2,]    2    4
 # Index first row and second column
 lst[[2]][1,2]
+#> [1] 3
 lst[['M']][1,2]
+#> [1] 3
 lst$M[1,2]
+#> [1] 3
 ```
 
 For nested lists, indexing can be strung together to access elements lower in the hierarchy:
@@ -84,9 +106,12 @@ For nested lists, indexing can be strung together to access elements lower in th
 lst <- list( Level_1 = list( Level_2 = 1:3 ) )
 # Access level 2 elements
 lst[[1]][[1]]
+#> [1] 1 2 3
 lst$Level_1$Level_2
+#> [1] 1 2 3
 # Or a combination
 lst$Level_1[[1]]
+#> [1] 1 2 3
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -101,9 +126,11 @@ You can easily determine the number of elements stored in a list, but more advan
 # List with elements of differing lengths
 lst <- list( 1:3, 'Hello', c( TRUE, FALSE ) )
 length( lst ) # Returns 3
+#> [1] 3
 # Advanced methods needed to determine 
 # internal length
 sapply( lst, length )
+#> [1] 3 1 2
 
 # Nested list with differing number of elements across 
 # and within levels
@@ -113,8 +140,11 @@ lst <- list(
 )
 # Only returns number of outermost elements
 length( lst )
+#> [1] 2
 # Returns number of nested lists
 sapply( lst, length )
+#> Level_1 Level_2 
+#>       3       1 
 ```
 
 R provides flexible means of adding or removing elements to a list:
@@ -125,11 +155,21 @@ lst[[2]] <- c( 'Dog', 'Cat' )
 # Add a named element
 lst$Lgc <- TRUE
 lst
+#> [[1]]
+#> [1] 1 2 3
+#> 
+#> [[2]]
+#> [1] "Dog" "Cat"
+#> 
+#> $Lgc
+#> [1] TRUE
 
 # Remove an element to a list
 lst[[2]] <- NULL
 lst$Lgc <- NULL
 lst
+#> [[1]]
+#> [1] 1 2 3
 ```
 
 Lists cannot be easily converted into simpler data types, such as a vector. R therefore provides a function `unlist` that will extract all internal elements of a list, and arrange them into a vector using the most flexible data type present internally:
@@ -143,6 +183,8 @@ lst <- list( vec_1, vec_2, mat_1 )
 # as.numeric( lst ) # Will not work, produces an error
 vec <- unlist( lst ) # Converts into a vector
 vec
+#> [1] "1"     "2"     "3"     "Dog"   "Cat"   "Mouse" "1"
+#> [8] "2"     "3"     "4"    "5"     "6"     "7"     "8"     "9"
 # Of class character, because one the of elements 
 # was a vector of character strings
 ```
