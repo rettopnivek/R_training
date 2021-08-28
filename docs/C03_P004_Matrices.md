@@ -124,10 +124,10 @@ Extracting values from a matrix is similar to extracting values from a vector, b
 # Example matrix
 M <- matrix( 1:9, 3, 3 )
 # Access element in first row and first column
-M[ 1, 1 ]
+M[1, 1]
 #> [1] 1
 # Access element in third row and second column
-M[ 3, 2 ]
+M[3, 2]
 #> [1] 6
 ```
 
@@ -152,17 +152,17 @@ To get R to return an entire row or column, you can not include a row or column 
 ```R
 M <- matrix( 1:9, 3, 3 )
 # Returns third column
-M[, 3 ]
+M[, 3]
 #> [1] 7 8 9
 # Returns second row
-M[ 2,  ]
+M[2, ]
 #> [1] 2 5 8
 # White space does not matter
-M[ 1, ]
+M[1, ]
 #> [1] 1 4 7
-M[ 2, ]
+M[2, ]
 #> [1] 2 5 8
-M[  ,  3 ]
+M[, 3]
 #> [1] 7 8 9
 ```
 
@@ -170,7 +170,7 @@ Like vectors, you can index matrices using a sequence of integers:
 ```R
 M <- matrix( 1:4, 4, 2 )
 # First two rows
-M[ 1:2, ]
+M[1:2, ]
 #>      [,1] [,2]
 #> [1,]    1    1
 #> [2,]    2    2
@@ -186,13 +186,13 @@ As before, you can also index matrices using conditional statements, though you 
 M <- matrix( 1:10, 2, 5, byrow = T )
 # Show only columns in which first row
 # is greater than 3
-sel <- M[ 1, ] > 3
-M[ , sel ]
+sel <- M[1, ] > 3
+M[, sel]
 #>      [,1] [,2]
 #> [1,]    4    5
 #> [2,]    9   10
-# However, M[ sel, ] does not work, returns an error
-M[ sel, ]
+# However, M[sel, ] does not work, returns an error
+M[sel, ]
 #> Error in M[sel, ] : (subscript) logical subscript 
 #> too long
 ```
