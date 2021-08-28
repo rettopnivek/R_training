@@ -18,26 +18,48 @@ Just as a vector is a set of multiple values, a matrix is a set of multiple vect
 J <- 3; I <- 3
 M <- matrix( 0, J, I )
 M
+#>      [,1] [,2] [,3]
+#> [1,]    0    0    0
+#> [2,]    0    0    0
+#> [3,]    0    0    0
 
 # Matrices can be initialized with a vector of values
 M <- matrix( 1:9, 3, 3 )
 M
+#>      [,1] [,2] [,3]
+#> [1,]    1    4    7
+#> [2,]    2    5    8
+#> [3,]    3    6    9
 
 # A vector with fewer values than available in 
 # the matrix is copied multiple times
 M <- matrix( 1:3, 3, 3 )
 M # Note matrix is filled COLUMNS first
+#>      [,1] [,2] [,3]
+#> [1,]    1    1    1
+#> [2,]    2    2    2
+#> [3,]    3    3    3
 
 # Can specify to fill ROWS first as well
 M <- matrix( 1:3, 3, 3, byrow = TRUE )
 M
+#>      [,1] [,2] [,3]
+#> [1,]    1    2    3
+#> [2,]    1    2    3
+#> [3,]    1    2    3
 
 # Matrices can consist of characters or 
 # logical values as well
 M <- matrix( 'Hello', 2, 2 )
 M
+#>      [,1]    [,2]   
+#> [1,] "Hello" "Hello"
+#> [2,] "Hello" "Hello"
 M <- matrix( FALSE, 2, 2 )
 M
+#>       [,1]  [,2]
+#> [1,] FALSE FALSE
+#> [2,] FALSE FALSE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -49,8 +71,11 @@ R provides a number of convenience functions for determining the dimensions of m
 ```R
 M <- matrix( 1:4, 4, 2 )
 nrow( M ) # Number of rows
+#> [1] 4
 ncol( M ) # Number of columns
+#> [1] 2
 dim( M ) # Number of rows and columns
+#> [1] 4 2
 ```
 
 R also provides functions to add new rows or columns to an existing matrix:
@@ -62,18 +87,31 @@ M <- cbind( M, 7:9 )
 # Add new column on left
 M <- cbind( 1:3, M )
 M
+#>      [,1] [,2] [,3]
+#> [1,]    1    4    7
+#> [2,]    2    5    8
+#> [3,]    3    6    9
 
 # Adding rows
-M <- matrix( 5:8, 4, 1 )
+M <- matrix( 5:8, 1, 4 )
 # Add new rows to bottom
 M <- rbind( M, 9:12 )
 # Add new rows to top
-M <- rbind( M, 1:4 )
+M <- rbind( 1:4, M )
+M
+#>      [,1] [,2] [,3] [,4]
+#> [1,]    1    2    3    4
+#> [2,]    5    6    7    8
+#> [3,]    9   10   11   12
 
 # Multiple columns or rows can be added at once
 M <- matrix( 4:6, 3, 1 )
 M <- cbind( 1:3, M, 7:9 )
 M
+#>      [,1] [,2] [,3]
+#> [1,]    1    4    7
+#> [2,]    2    5    8
+#> [3,]    3    6    9
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -87,22 +125,27 @@ Extracting values from a matrix is similar to extracting values from a vector, b
 M <- matrix( 1:9, 3, 3 )
 # Access element in first row and first column
 M[ 1, 1 ]
+#> [1] 1
 # Access element in third row and second column
 M[ 3, 2 ]
+#> [1] 6
 ```
 
 Note that if you do not include the comma, R internally converts the matrix to a vector, and will still return a value. However, it can be unintuitive to determine which value R will return. By default, R stacks the columns on top of each other:
 ```R
 M <- matrix( 1:8, 4, 2 )
 M[1] # Works, returns element in [1,1]
+#> [1] 1
 # Works, returns element in [1,2]
 # the fifth value after stacking 
 # first column on top of second column
 M[5]
+#> [1] 5
 # If fill by rows, position [1,2] 
 # now has a different value
 M <- matrix( 1:8, 4, 2, byrow = T )
 M[5]
+#> [1] 2
 ```
 
 To get R to return an entire row or column, you can not include a row or column number, respectively:
@@ -110,12 +153,17 @@ To get R to return an entire row or column, you can not include a row or column 
 M <- matrix( 1:9, 3, 3 )
 # Returns third column
 M[, 3 ]
+#> [1] 7 8 9
 # Returns second row
 M[ 2,  ]
+#> [1] 2 5 8
 # White space does not matter
 M[1,]
+#> [1] 1 4 7
 M[2, ]
+#> [1] 2 5 8
 M[  ,  3 ]
+#> [1] 7 8 9
 ```
 
 Like vectors, you can index matrices using a sequence of integers:
@@ -123,8 +171,14 @@ Like vectors, you can index matrices using a sequence of integers:
 M <- matrix( 1:4, 4, 2 )
 # First two rows
 M[ 1:2, ]
+#>      [,1] [,2]
+#> [1,]    1    1
+#> [2,]    2    2
 # First and last row
 M[ c( 1, 4 ), ]
+#>      [,1] [,2]
+#> [1,]    1    1
+#> [2,]    4    4
 ```
 
 As before, you can also index matrices using conditional statements, though you need to carefully consider over what dimensions you are applying a conditional statement:
@@ -134,7 +188,11 @@ M <- matrix( 1:10, 2, 5, byrow = T )
 # is greater than 3
 sel <- M[1,] > 3
 M[,sel]
+#>      [,1] [,2]
+#> [1,]    4    5
+#> [2,]    9   10
 # However, M[sel,] does not work, returns an error
+#> Error in M[sel, ] : (subscript) logical subscript too long
 ```
 
 <a href="#TOC">&#129145;</a>
