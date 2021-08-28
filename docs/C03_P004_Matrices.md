@@ -193,7 +193,8 @@ M[ , sel ]
 #> [2,]    9   10
 # However, M[ sel, ] does not work, returns an error
 M[ sel, ]
-#> Error in M[sel, ] : (subscript) logical subscript too long
+#> Error in M[sel, ] : (subscript) logical subscript 
+#> too long
 ```
 
 <a href="#TOC">&#129145;</a>
