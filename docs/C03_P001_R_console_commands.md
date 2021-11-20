@@ -32,11 +32,17 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 
 ```R
 1 + 1     # Addition
+#> [1] 2
 3 - 2     # Subtraction
+#> [1] 1
 2 * 3     # Multiplication
+#> [1] 6
 8 / 2     # Division
+#> [1] 4
 2 ^ 3     # Exponents
+#> [1] 8
 4 %% 3    # Modulo (returns the remainder after division)
+#> [1] 1
 ```
 
 *Note: These are examples of a special type of function known as an 'operator'.*
@@ -49,14 +55,23 @@ Preceding any input with the `#` symbol will prevent R from running the input. T
 R has special operator functions (binary relational operators) that can check whether conditions are `TRUE` or `FALSE` - these are known as conditional statements:
 ```R
 1 == 1 # Check if equal
+#> [1] TRUE
 1 == 2
+#> [1] FALSE
 1 != 2 # Check if not equal
+#> [1] TRUE
 1 != 1
+#> [1] FALSE
 4 > 1 # Check if greater than
+#> [1] TRUE
 1 > 4
+#> [1] FALSE
 4 <= 5 # Check if less than or equal to
+#> [1] TRUE
 4 <= 4
+#> [1] TRUE
 4 <= 3
+#> [1] FALSE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -66,9 +81,13 @@ R has special operator functions (binary relational operators) that can check wh
 
 ```R
 sqrt( 4 ) # Square root
+#> [1] 2
 log( 2 )  # Natural log
+#> [1] 0.6931472
 sin( 1 )  # Trig functions (in radians)
+#> [1] 0.841471
 asin( 0.841471 )
+#> [1] 1
 ```
 
 *Note: See here how when calling a mathematical function, we use the name of the function (e.g., 'sqrt'), followed by the value we want to apply the function to (e.g., '4' ) in parantheses. This is an example of the standard way to apply almost any function in R to a value or variable.*
@@ -77,12 +96,16 @@ asin( 0.841471 )
 #### 5. Order of operations and parantheses
 
 ```R
-10 + 8 * 4^2    # This is equivalent to...
-10 + ( 8 * (4^2) )
+10 + 8 * 4^2 
+#> [1] 138
+10 + ( 8 * (4^2) ) # Equivalent
+#> [1] 138
 # But does not equal
 (10 + 8) * (4^2)
+#> [1] 288
 # or
 10 + ( 8 * 4 )^2
+#> [1] 1034
 ```
 
 If you aren't sure how the order of operations will work when writing out math, as shown in the examples above, you can use parantheses to clearly indicate to users (and to R) the order for which math should be performed.
@@ -118,7 +141,7 @@ Assigning a value to a variable:
 # Best practice approach
 a <- 2
 # Equivalent, but can be easily confused 
- #with another R command '=='
+# with another R command '=='
 a = 2 
 # Displays value assigned to variable
 a
@@ -131,12 +154,15 @@ Assigning values to variables allows for basic algebra:
 a <- 4; b <- 2; x <- 0.5;
 y <- a + b*x # Save output
 y
+#> [1] 5
 # Output y must be updated if one 
 # of inputs is changed
 a <- 10
 y # Output is unchanged
+#> [1] 5
 y <- a + b*x # Update output
 y # Now holds updated output
+#> [1] 11
 ```
 
 *Note: The above code provides an example of calling multiple commands in the same line. As shown, we can separate different commands using the semi-colon symbol without having to hit 'enter' and start a new line.*
