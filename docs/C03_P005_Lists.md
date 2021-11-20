@@ -183,9 +183,9 @@ lst <- list( vec_1, vec_2, mat_1 )
 # as.numeric( lst ) # Will not work, produces an error
 vec <- unlist( lst ) # Converts into a vector
 vec
-#> [1]  "1"     "2"     "3"     "Dog"   "Cat"   "Mouse" "1"
-#> [8]  "2"     "3"     "4"     "5"     "6"     "7"     "8"
-#> [14] "9"
+#> [1]  "1"     "2"     "3"     "Dog"   "Cat"   "Mouse" 
+#> [7]  "1"     "2"     "3"     "4"     "5"     "6"     
+#> [13] "7"     "8"     "9"
 # Of class character, because one the of elements 
 # was a vector of character strings
 ```
