@@ -41,12 +41,15 @@ Care is needed when working with factors, because they work differently compared
 num_as_str <- c( '100', '10', '1' )
 # R can correctly convert these strings to numbers
 as.numeric( num_as_str )
+#> [1] 100  10   1
 # Convert character vector to factor
 num_as_fac <- as.factor( num_as_str )
 # Conversion no longer works as expected
 as.numeric( num_as_fac )
+#> [1] 3 2 1
 # Must first convert to character, then to number
 as.numeric( as.character( num_as_fac ) )
+#> [1] 100  10   1
 ```
 
 Factors also only want users to replace values in the factor that correspond to one of the levels defined in the factor:
@@ -61,6 +64,12 @@ vec <- as.factor( c( 'Dog', 'Puppy', 'Canine' ) )
 # Attempting to add new character string 
 # results in strange behavior
 vec[3] <- 'Cat' # Produces a warning and leads to missing data
+#> Warning message:
+#> In `[<-.factor`(`*tmp*`, 3, value = "Cat") :
+#>   invalid factor level, NA generated
+vec
+#> [1] Dog   Puppy <NA> 
+#> Levels: Canine Dog Puppy
 ```
 
 Because R by default converts character vectors to factors when creating data frames, users must be careful and understand how factors are representing the raw data. Some common issues you might come across are:
@@ -103,10 +112,13 @@ df <- data.frame(
 # Access element in row 1, column 2
 # using method for indexing matrices
 df[ 1, 2 ]
+#> [1] 4
 # Access element in row 1, column 2
 # using method for indexing values within a list
 df[[2]][ 1 ]
+#> [1] 4
 df$Col2[ 1 ] # Named list approach
+#> [1] 4
 ```
 
 Similar logic applies to accessing columns:
@@ -119,10 +131,13 @@ df <- data.frame(
 # Access column 1
 # using method for indexing matrices
 df[ , 1 ]
+#> [1] 1 2 3
 # Access column 1
 # using method for indexing list
 df[[1]]
+#> [1] 1 2 3
 df$Col1 # Named list approach
+#> [1] 1 2 3
 ```
 
 Again, one can index a data frame with a sequence of integers as well:
@@ -135,10 +150,13 @@ df <- data.frame(
 # Access first two rows of column 1
 # using method for indexing matrices
 df[ 1:2 , 1 ]
+#> [1] 1 2
 # Access first two rows of column 1
 # using method for indexing list
 df[[1]][ 1:2 ]
+#> [1] 1 2
 df$Col1[ 1:2 ] # Named list approach
+#> [1] 1 2
 ```
 
 Because a data frame is a list of vectors, different data types are preserved across columns:
@@ -151,11 +169,13 @@ df <- data.frame(
 # Extract column 1
 vec <- df$Col1
 # Vector is of class 'numeric'
-is.numeric( vec ) # TRUE
+is.numeric( vec )
+#> [1] TRUE
 # Extract column 2
 vec <- df$Col2
 # Vector is of class 'logical'
-is.logical( vec ) # TRUE
+is.logical( vec )
+#> [1] TRUE
 ```
 
 However, things are more complicated when accessing rows. Pulling out a single row does not return a vector (in contrast to a matrix). Instead, even though it is a single row, R still treats it as a list, specifically a data frame. One must convert the row using the `unlist` command.
@@ -168,12 +188,17 @@ df <- data.frame(
 )
 # Access first row
 df[1,]
+#>   Col1 Col2
+#> 1    1    4
 # Save row
 vec <- df[1,]
-is.vector( vec ) # FALSE
-is.list( vec ) # TRUE
+is.vector( vec )
+#> [1] FALSE
+is.list( vec )
+#> [1] TRUE
 # Convert to vector
-is.vector( unlist( vec ) ) # TRUE
+is.vector( unlist( vec ) )
+#> [1] TRUE
 ```
 
 <a href="#TOC">&#129145;</a>
