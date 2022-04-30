@@ -33,9 +33,7 @@ df <- data.frame(
 <a name="S02"></a>
 #### 2. Factors
 
-Unfortunately, there is a nuance in creating data frames with character strings. By default, R will actually convert a column with character strings into a different data type, a unique R data type known as a __factor__. A __factor__ can be thought of a hybrid between character strings and integer data types. Specifically, R determines the unique number of character strings (or 'levels'), and then assigns an integer value to each unique string. Therefore, internally, a __factor__ consists of a vector of integers, but R knows that each integer value is linked to a specific string.
-
-Care is needed when working with factors, because they work differently compared to both integers (the internal representation closest to a factor) and character strings (what a factor presents as). For example, here is an example of a potential pitfall when representing elements as a factor, rather than a character vector:
+Note that with older versions of R (e.g., versions prior to 4.0), by default R would convert a column with character strings into a different data type, a unique R data type known as a __factor__. A __factor__ can be thought of a hybrid between character strings and integer data types. Specifically, R determines the unique number of character strings (or 'levels'), and then assigns an integer value to each unique string. Therefore, internally, a __factor__ consists of a vector of integers, but R knows that each integer value is linked to a specific string. Care is needed when working with factors, because they work differently compared to both integers (the internal representation closest to a factor) and character strings (what a factor presents as). For example, here is an example of a potential pitfall when representing elements as a factor, rather than a character vector:
 ```R
 # Create a character vector of numbers
 num_as_str <- c( '100', '10', '1' )
@@ -72,15 +70,12 @@ vec
 #> Levels: Canine Dog Puppy
 ```
 
-Because R by default converts character vectors to factors when creating data frames, users must be careful and understand how factors are representing the raw data. Some common issues you might come across are:
+Users must be careful and understand how factors are representing the raw data. Some common issues you might come across are:
 * Dates intended to be represented as strings instead are converted to factors;
 * A typo in a column converts a numeric column into a factor, with subsequent conversions resulting in incorrect numeric values.
 * Trying to add new data to a column can produce errors or missing data due to factors only considering currently defined levels.
 
-While factors have their uses, in general I recommend avoiding this data type and using character vectors instead. Fortunately, 
-there is an argument that will override R's default behavior when creating data frames:
-
-Creating a data frames typically requires a little more thought. When creating a data frame, rather then specifying the number of rows and columns you want (and some default values to initially fill out those rows and columns), you instead have to specify each column separately, providing a column name and an initial value:
+While factors have their uses, in general I recommend avoiding this data type and using character vectors instead. Fortunately, newer versions of R (version 4.0 onward) no longer automatically convert character strings to factors. Furthermore, there is an argument that will override R's default behavior when creating data frames:
 ```R
 # Want a data frame with 
 # 3 columns, one for numbers,
