@@ -6,7 +6,7 @@ To install RStudio, you can go to <https://rstudio.com/products/rstudio/download
 
 <img src="I0014_RStudio_products.png" alt="RStduo products" width="640"/>
 
-Select the link for the installer matching your operating system (look to the right of the version number for 'macOS' or 'Windows').
+The RStudio webpage should then automatically determine the appropriate link for the installer matching your operating system - if everything looks correct, you can click the download button.
 
 <img src="I0015_RStudio_install.png" alt="RStduo installation" width="640"/>
 
