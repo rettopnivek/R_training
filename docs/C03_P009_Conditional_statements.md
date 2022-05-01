@@ -238,7 +238,7 @@ if (cond) {
   print('  statement')
 }
 
-# If condition is FALES, outputs second statement
+# If condition is FALSE, outputs second statement
 if (!cond) {
   print('1st')
   print('  statement')
