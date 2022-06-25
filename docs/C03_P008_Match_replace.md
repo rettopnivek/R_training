@@ -1,6 +1,6 @@
 ## Matching/Replacing Strings
 
-Introduction
+R provides several tools to (1) identify character strings that match each other (completely or partially), and (2) replace character strings (or parts of character strings) with a different character string. This is referred to as **pattern** matching and replacement.
 
 <a name="TOC"></a>
 ### Table of contents
@@ -13,7 +13,7 @@ Introduction
 <a name="S01"></a>
 #### 1. Base functions for pattern matching/replacement
 
-Introduction.
+R provides 2 core functions to match patterns to character strings and 2 core functions to replace patterns within character strings.
 
 * <a href="#S011">grep()</a>
 * <a href="#S012">grepl()</a>
@@ -24,7 +24,7 @@ Introduction.
 <a name="S011"></a>
 #### grep()
 
-Introduction:
+The function **grep()** takes a pattern, attempts to match it against a vector of character strings, and then returns the position(s) in the vector of character strings that contain the pattern:
 ```R
 # Create example character vector
 x <- c( "ABC", "abc", "CBA", "cba" )
@@ -36,20 +36,20 @@ x <- c( "ABC", "abc", "CBA", "cba" )
 # matches in vector
 # (Case-sensitive)
 grep( "A", x )
-# [1] 1 3
+#> [1] 1 3
 grep( "CB", x )
-# [1] 3
+#> [1] 3
 
 # Return values from 
 # vector that match
 grep( "b", x, value = TRUE )
-# [1] "abc" "cba"
+#> [1] "abc" "cba"
 grep( "ba", x, value = TRUE )
-# [1] "cba"
+#> [1] "cba"
 
 # To make case-insensitive
 grep( "a", x, ignore.case = TRUE )
-# [1] 1 2 3 4
+#> [1] 1 2 3 4
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -58,7 +58,7 @@ grep( "a", x, ignore.case = TRUE )
 <a name="S012"></a>
 #### grepl()
 
-Introduction:
+The function **grepl()**  takes a pattern, attempts to match it against a vector of character strings, and then returns a logical vector indicating which character strings in the vector contain the pattern:
 ```R
 # Example character vector
 x <- c( "ABC", "abc", "CBA", "cba" )
@@ -68,13 +68,13 @@ x <- c( "ABC", "abc", "CBA", "cba" )
 # TRUE for matches
 # (Case-sensitive)
 grepl( "A", x )
-# [1] TRUE FALSE TRUE FALSE
+#> [1] TRUE FALSE TRUE FALSE
 grepl( "CB", x )
-# [1] FALSE FALSE TRUE FALSE
+#> [1] FALSE FALSE TRUE FALSE
 
 # Argument to make case-insensitive
 grepl( "a", x, ignore.case = TRUE )
-# [1] TRUE TRUE TRUE TRUE
+#> [1] TRUE TRUE TRUE TRUE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -83,7 +83,7 @@ grepl( "a", x, ignore.case = TRUE )
 <a name="S013"></a>
 #### sub()
 
-Introduction:
+The function **sub()** takes a pattern and a replacement string, and replaces the *first* occurence within a character string containing the pattern, doing so for each element in a vector:
 ```R
 # Create example character vector
 x <- c( "abc", "ABC", "aabb", "AABB" )
@@ -91,11 +91,11 @@ x <- c( "abc", "ABC", "aabb", "AABB" )
 # Replaces 'a' with '1' for 
 # first match (case-sensitive)
 sub( "a", "1", x )
-# [1] "1bc"  "ABC"  "1abb" "AABB"
+#> [1] "1bc"  "ABC"  "1abb" "AABB"
 
 # To make case-insensitive
 sub( "a", "1", x, ignore.case = TRUE )
-# [1] "1bc"  "1BC"  "1abb" "1ABB"
+#> [1] "1bc"  "1BC"  "1abb" "1ABB"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -104,7 +104,7 @@ sub( "a", "1", x, ignore.case = TRUE )
 <a name="S014"></a>
 #### gsub()
 
-Introduction:
+The function **gsub()** takes a pattern and a replacement string, and replaces *all* occurences within a character string containing the pattern, doing so for each element in a vector:
 ```R
 # Create example character vector
 x <- c( "abc", "ABC", "aabb", "AABB" )
@@ -112,11 +112,11 @@ x <- c( "abc", "ABC", "aabb", "AABB" )
 # Replaces 'a' with '1' for 
 # all matches (case-sensitive)
 gsub( "a", "1", x )
-# [1] "1bc"  "ABC"  "11bb" "AABB"
+#> [1] "1bc"  "ABC"  "11bb" "AABB"
 
 # To make case-insensitive
 gsub( "a", "1", x, ignore.case = TRUE )
-# [1] "1bc"  "1BC"  "11bb" "11BB"
+#> [1] "1bc"  "1BC"  "11bb" "11BB"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
