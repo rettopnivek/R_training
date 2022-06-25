@@ -128,7 +128,7 @@ gsub( "a", "1", x, ignore.case = TRUE )
 * <a href="#S021">Motivating example</a>
 * <a href="#S022">Forthcoming</a>
 
-Regular expressions provide syntax to allow a user to search for various combinations of letters, digits, and special characters. The syntax is flexible, and allows much more complicated groupings and combinations then shown in previous examples. Regular expressions work with a variety of R functions, including __grep__, __grepl__, __sub___, __gsub__, and __strsplit__.
+Regular expressions provide syntax to allow a user to search for various combinations of letters, digits, and special characters. The syntax is flexible, and allows much more complicated groupings and combinations then shown in previous examples. Regular expressions work with a variety of R functions, including __grep__, __grepl__, __sub__, __gsub__, and __strsplit__.
 
 
 <a name="S021"></a>
@@ -152,7 +152,7 @@ x <- c(
 
 # Doesn't work
 grep( '123', x, value = TRUE )
-# [1] "123"
+#> [1] "123"
 
 # Works, but requires extended code 
 # with multiple calls
@@ -161,12 +161,12 @@ entries <-
   grepl( '2', x ) | 
   grepl( '3', x )
 x[ entries ]
-# [1] "123" "321" "231" "152536" "14" "25" "36"
+#> [1] "123" "321" "231" "152536" "14" "25" "36"
 
 # Regular expressions allow 
 # concise, simple call
 grep( '[:1-3:]', x, value = TRUE )
-# [1] "123" "321" "231" "152536" "14" "25" "36"
+#> [1] "123" "321" "231" "152536" "14" "25" "36"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -178,6 +178,18 @@ Introduction.
 ```R
 # Example
 ```
+
+Characters with special meanings and uses in regular expressions, known as **metacharacters**:
+- The backslash \\
+- The caret ^
+- The dollar sign $
+- The period or dot .
+- The vertical bar or pipe symbol |
+- The question mark ?
+- The asterisk or star \*
+- The parantheses ()
+- The square brackets \[\]
+- The curly braces {}
 
 *Note: Advance content.*
 
