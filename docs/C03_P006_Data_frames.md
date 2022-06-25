@@ -86,7 +86,7 @@ df <- data.frame(
   CHR = rep( c( 'Cat', 'Dog', 'Mouse' ), 3 ),
   LGC = TRUE,
   # Override conversion of strings to factors
-  stringsAsFactors = F
+  stringsAsFactors = FALSE
 )
 ```
 
