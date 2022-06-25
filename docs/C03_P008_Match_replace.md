@@ -169,14 +169,42 @@ grep( '[:1-3:]', x, value = TRUE )
 #> [1] "123" "321" "231" "152536" "14" "25" "36"
 ```
 
+In other words, in addition to the most basic matching of a pattern within a string (e.g., matching the "a" in "cat"), regular expressions provide a variety of commands to enable much more complex pattern matching. Specifically, a user can specify a complex set of rules for pattern matching in a very concise manner using a variety of **metacharacters**.
+
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 <a name="S022"></a>
-#### Forthcoming
+#### Character classes or sets
+
+The terms **()** 
 
 Introduction.
 ```R
-# Example
+# Example character string
+x <- c( "1", "2", "3", "4" )
+
+# Goal: Identify which elements in vector 
+# contain EITHER "1" or "4"
+
+# Doesn't work
+grep( "14", x )
+#> integer(0)
+# Works but is not concise
+c( grep( "1", x ), grep( "4", x ) )
+#> [1] 1 4
+# Using "[]" allows for single function call
+grep( "[14]", x )
+#> [1] 1 4
+
+# Goal: Match both "gray" (American) and "grey" (British)
+x <- c( "gray", "grey", "black", "white" )
+
+# Matches either "a" OR "e" within a pattern
+grep( "gr[ae]y", x )
+#> [1] 1 2
+# Order doesn't matter
+grep( "gr[ea]y", x )
+#> [1] 1 2
 ```
 
 Characters with special meanings and uses in regular expressions, known as **metacharacters**:
