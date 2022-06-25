@@ -1,6 +1,6 @@
 ## Matching/Replacing Strings
 
-R provides several tools to (1) identify character strings that match each other (completely or partially), and (2) replace character strings (or parts of character strings) with a different character string. This is referred to as **pattern** matching and replacement.
+R provides several tools to (1) identify whether a character string contains a particular **pattern**, and (2) replace an original pattern within a character string with a new pattern. This is referred to as **pattern** matching and replacement.
 
 <a name="TOC"></a>
 ### Table of contents
