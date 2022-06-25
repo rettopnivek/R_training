@@ -180,16 +180,16 @@ Introduction.
 ```
 
 Characters with special meanings and uses in regular expressions, known as **metacharacters**:
-- The backslash \\
-- The caret ^
-- The dollar sign $
-- The period or dot .
-- The vertical bar or pipe symbol |
-- The question mark ?
-- The asterisk or star \*
-- The parantheses ()
-- The square brackets \[\]
-- The curly braces {}
+- \\ The backslash)
+- ^ (The caret)
+- $ (The dollar sign)
+- . (The period or dot)
+- | (The vertical bar or pipe symbol)
+- ? (The question mark)
+- \* (The asterisk or star)
+- () (Parantheses)
+- \[\] (Square brackets)
+- {} (Curly braces)
 
 *Note: Advance content.*
 
