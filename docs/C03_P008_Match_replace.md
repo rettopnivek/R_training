@@ -176,15 +176,13 @@ In other words, in addition to the most basic matching of a pattern within a str
 <a name="S022"></a>
 #### Character classes or sets
 
-The terms **()** 
-
-Introduction.
+One can use square brackets to match a single character against a variety of different patterns, known as character classes or sets:
 ```R
 # Example character string
 x <- c( "1", "2", "3", "4" )
 
 # Goal: Identify which elements in vector 
-# contain EITHER "1" or "4"
+# contain either "1" or "4"
 
 # Doesn't work
 grep( "14", x )
@@ -205,19 +203,15 @@ grep( "gr[ae]y", x )
 # Order doesn't matter
 grep( "gr[ea]y", x )
 #> [1] 1 2
-```
 
-Characters with special meanings and uses in regular expressions, known as **metacharacters**:
-- \\ The backslash)
-- ^ (The caret)
-- $ (The dollar sign)
-- . (The period or dot)
-- | (The vertical bar or pipe symbol)
-- ? (The question mark)
-- \* (The asterisk or star)
-- () (Parantheses)
-- \[\] (Square brackets)
-- {} (Curly braces)
+# Note [_] matches only a single character
+x <- c( "Meat", "Meet", "Met", "Mate" )
+x[ grep( "M[ea]t", x ) ]
+#> [1] "Met"  "Mate"
+# To isolate words with double vowels
+x[ grep( "M[ea][ea]t", x ) ]
+#> [1] "Meat" "Meet"
+```
 
 *Note: Advance content.*
 
