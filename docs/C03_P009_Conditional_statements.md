@@ -25,73 +25,91 @@ To make use of conditional statements, we first need to indicate when conditions
 The __"=="__ operator tests whether the value on the left equals the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-X == Y # TRUE
-X == Z # FALSE
+X == Y
+#> [1] TRUE
+X == Z
+#> [1] FALSE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v1 == v2 # TRUE FALSE FALSE
+v1 == v2
+#> [1] TRUE FALSE FALSE
 ```
 
 The __"!="__ operator tests whether the value on the left does not equal the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-X != Z # TRUE
-X != Y # FALSE
+X != Z
+#> [1] TRUE
+X != Y
+#> [1] FALSE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v1 != v2 # FALSE TRUE TRUE
+v1 != v2
+#> [1] FALSE TRUE TRUE
 ```
 
 The __">"__ operator tests whether whether the value on the left is greater than the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-Z > X # TRUE
-X > Y # FALSE
+Z > X
+#> [1] TRUE
+X > Y
+#> [1] FALSE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v2 > v1 # FALSE TRUE TRUE
+v2 > v1
+#> [1] FALSE TRUE TRUE
 ```
 
 The __">="__ operator tests whether whether the value on the left is greater than or equal to the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-Z >= X # TRUE
-X >= Y # TRUE
+Z >= X
+#> [1] TRUE
+X >= Y
+#> [1] TRUE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v2 >= v1 # TRUE TRUE TRUE
+v2 >= v1
+#> [1] TRUE TRUE TRUE
 ```
 
 The __"<"__ operator tests whether whether the value on the left is less than the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-X < Z # TRUE
-X < Y # FALSE
+X < Z
+#> [1] TRUE
+X < Y
+#> [1] FALSE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v1 < v2 # FALSE TRUE TRUE
+v1 < v2
+#> [1] FALSE TRUE TRUE
 ```
 
 The __"<="__ operator tests whether whether the value on the left is less than or equal to the value on the right:
 ```r
 X <- 1; Y <- 1; Z <- 2
-X < Z # TRUE
-X < Y # FALSE
+X < Z
+#> [1] TRUE
+X < Y
+#> [1] FALSE
 
 # Each element in vectors of matching 
 # length are compared to each other
 v1 <- 1:3; v2 <- c( 1, 3, 5 )
-v1 <= v2 # TRUE TRUE TRUE
+v1 <= v2
+#> [1] TRUE TRUE TRUE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -104,7 +122,8 @@ The __"&"__ operator identifies all cases that are true for x AND y:
 # Define logical vectors
 x <- c( T, T, F )
 y <- c( F, T, F )
-x & y # FALSE TRUE FALSE
+x & y
+#> [1] FALSE TRUE FALSE
 ```
 
 The __"|"__ operator identifies all cases that are true for x OR y:
@@ -112,7 +131,8 @@ The __"|"__ operator identifies all cases that are true for x OR y:
 # Define logical vectors
 x <- c( T, T, F )
 y <- c( F, T, F )
-x | y # TRUE TRUE FALSE
+x | y
+#> [1] TRUE TRUE FALSE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -125,19 +145,23 @@ The functions __any__ and __all__ allow a user to collapse a logical vector down
 The function __any(x)__ returns TRUE if any element of the logical vector x is TRUE:
 ```r
 x <- c( T, F, F )
-any( x ) # TRUE
+any( x )
+#> [1] TRUE
 
 x <- c( F, F, F )
-any( x ) # FALSE
+any( x )
+#> [1] FALSE
 ```
 
 The function __all(x)__ returns TRUE only when all elements of the logical vector x are TRUE:
 ```r
 x <- c( T, T, T )
-all( x ) # TRUE
+all( x )
+#> [1] TRUE
 
 x <- c( T, F, F )
-all( x ) # FALSE
+all( x )
+#> [1] FALSE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -154,10 +178,12 @@ v2 <- c( 'A', 'A', 'D', 'E', 'C' )
 
 # Identify elements in v1 that are also in v2, 
 # even though length(v1) != length(v2)
-v1 %in% v2 # TRUE FALSE TRUE
+v1 %in% v2
+#> [1] TRUE FALSE TRUE
 
 # Identify elements in v2 that are also in v1
-v2 %in% v1 # TRUE TRUE FALSE FALSE TRUE
+v2 %in% v1
+#> [1] TRUE TRUE FALSE FALSE TRUE
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -190,24 +216,30 @@ if (cond) {
   print( 'Hello' )
   print( 'World' )
 }
+#> [1] "Hello"
+#> [1] "World"
 
 # For a single call, brackets can be excluded
 if (cond)
   print( 'Hello world' )
+#> [1] "Hello world"
 
 # If evaluates to FALSE, no output
 if (!cond)
   print( 'Hello world' )
 
-# Only first value in logical vector 
-# is evaluated
-vec <- c( T, F, F ) 
-if (vec) # Returns warning
+# A logical vector of length greater 
+# than 1 will return an error
+vec <- c( TRUE, FALSE, FALSE ) 
+if (vec) # Returns error
   print( 'Hello world' )
+#> Error in if (vec) print("Hello world") : 
+#>   the condition has length > 1
 
 # Use 'any' or 'all' for vectors
 if ( any( vec ) ) # TRUE
   print( 'Hello world' )
+#> [1] "Hello world"
 if ( all( vec ) ) # FALSE
   print( 'Hello world' )
 ```
@@ -237,6 +269,8 @@ if (cond) {
   print('2nd')
   print('  statement')
 }
+#> [1] "1st"
+#> [1] "  statement"
 
 # If condition is FALSE, outputs second statement
 if (!cond) {
@@ -246,18 +280,17 @@ if (!cond) {
   print('2nd')
   print('  statement')
 }
-
-# Only first value in logical 
-# vector is evaluated
-vec <- c( T, F, F ) 
-if (vec) # Returns warning
-  print( 'A' ) else print( 'B' )
+#> [1] "2nd"
+#> [1] "  statement"
 
 # Use 'any' or 'all' for vectors
+vec <- c( TRUE, FALSE, FALSE )
 if ( any( vec ) ) # TRUE
   print( 'A' ) else print( 'B' )
+#> [1] "A"
 if ( all( vec ) ) # FALSE
   print( 'A' ) else print( 'B' )
+#> [1] "B"
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -278,6 +311,7 @@ vec <- c( TRUE, FALSE, FALSE )
 # 'A' when 'vec' is TRUE and
 # 'B' when 'vec' is FALSE
 ifelse( vec, 'A', 'B' )
+#> [1] "A" "B" "B"
 
 # Type of output depends
 # on data type of options 
@@ -287,25 +321,37 @@ ifelse( vec, 'A', 'B' )
 # type then returns vector 
 # of same data type
 ifelse( vec, 1, 2 ) # Numeric vector
+#> [1] 1 2 2
 
 # If data types are different 
 # for options then returns most 
 # flexible data type
 ifelse( vec, 1, 'A' ) # Character vector
+#> [1] "1" "A" "A"
 
 # However, if only one option 
 # is returned, then depends 
 # what is selected
 ifelse( c( T, T, T ), 1, 'A' ) # Numeric vector
+#> [1] 1 1 1
 
 # If one option is a vector of 
 # multiple elements, only first 
 # element is returned
 ifelse( vec, 1:3, 4 ) # Only 1 is returned
+#> [1] 1 4 4
 
 # Multiple elements can be returned 
 # by using lists
 ifelse( vec, list( 1:3 ), 4 ) # 1:3 is returned
+#> [[1]]
+#> [1] 1 2 3
+#> 
+#> [[2]]
+#> [1] 4
+#> 
+#> [[3]]
+#> [1] 4
 ```
 
 *Note: The __ifelse__ function strips attributes of an object, and this can result in unexpected output - for example, using __ifelse__ with dates will convert the output to integers, which is unlikely to be useful for the standard user.*
@@ -336,17 +382,37 @@ switch(
 
 Specific examples:
 ```R
-# Integer inputs
-input <- 1
+input <- 1 # When input is an integer
 switch(
   input,
-  'A',
-  'B',
-  'C'
+  'A', # Picked if input == 1
+  'B', # Picked if input == 2
+  'C'  # Picked if input == 3
+)
+#> "A"
+
+# No output is returned if integer 
+# is larger than number of outputs
+input <- 4
+switch(
+  input,
+  'A', 
+  'B', 
+  'C'  
 )
 
-# Character strings
-input <- 'Label_2'
+input <- 'Label_2' # When input is a character string
+switch(
+  input,
+  Label_1 = 'A',
+  Label_2 = 'B',
+  Label_3 = 'C'
+)
+#> "B"
+
+# Again, no output is returned if 
+# input does not match any labels
+input <- 'Label_4'
 switch(
   input,
   Label_1 = 'A',
@@ -354,8 +420,6 @@ switch(
   Label_3 = 'C'
 )
 ```
-
-*Note: Advanced content.*
 
 <a href="#TOC">&#129145;</a>
 
