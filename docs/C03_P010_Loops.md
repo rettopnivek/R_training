@@ -41,11 +41,14 @@ Running example:
 ```R
 # Specify external variables needed for loop
 i <- 1 # Counter
-while ( i <= 10 ) { # Condition for continuing
+while ( i <= 3 ) { # Condition for continuing
   # Operation to repeat
   print( i )
   i <- i + 1 # Increment counter
 }
+#> [1] 1
+#> [1] 2
+#> [1] 3
 ```
 
 <a name="S012"></a>
@@ -72,8 +75,11 @@ repeat {
   # operations to repeat
   print( i )
   i <- i + 1 # Increment counter
-  if ( i > 10 ) break # Condition for stopping
+  if ( i > 3 ) break # Condition for stopping
 }
+#> [1] 1
+#> [1] 2
+#> [1] 3
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
@@ -93,10 +99,13 @@ for (<counter variable> in <increment values>) {
 
 Running example:
 ```R
-for ( i in 1:10 ) {
+for ( i in 1:3 ) {
   # Operations to repeat
   print( i )
 }
+#> [1] 1
+#> [1] 2
+#> [1] 3
 ```
 
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
