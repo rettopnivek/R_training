@@ -391,15 +391,17 @@ switch(
 )
 #> "A"
 
-# No output is returned if integer 
+# A NULL value is returned if integer 
 # is larger than number of outputs
 input <- 4
-switch(
+x <- switch(
   input,
   'A', 
   'B', 
   'C'  
 )
+print( x )
+#> NULL
 
 input <- 'Label_2' # When input is a character string
 switch(
@@ -410,15 +412,30 @@ switch(
 )
 #> "B"
 
-# Again, no output is returned if 
+# Again, a NULL value is returned if 
 # input does not match any labels
 input <- 'Label_4'
-switch(
+x <- switch(
   input,
   Label_1 = 'A',
   Label_2 = 'B',
   Label_3 = 'C'
 )
+print( x )
+#> NULL
+
+# One can override the NULL output 
+# by including an unlabeled option
+input <- 'Label_4'
+x <- switch(
+  input,
+  Label_1 = 'A',
+  Label_2 = 'B',
+  Label_3 = 'C',
+  'No match'
+)
+print( x )
+#> [1] 'No match'
 ```
 
 <a href="#TOC">&#129145;</a>
