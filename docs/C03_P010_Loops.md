@@ -108,6 +108,74 @@ for ( i in 1:3 ) {
 #> [1] 3
 ```
 
+*Note: When using these constructs, **repeat** is the most flexible, followed by **while**, followed by **for** - however, in general it is better to use a less flexible control-flow construct to avoid unexpected outcomes.*
+
+While the **for** loop is the least flexible of the 3 types of loops in R, there still a variety of ways it can be implement and there are several nuances in its use:
+```R
+# Can iterate over variety 
+# of data types
+
+# Numeric vector
+for ( j in c( 1.1, 1.2, 1.3 ) ) {
+  print( j )
+}
+#> [1] 1.1
+#> [1] 1.2
+#> [1] 1.3
+
+# Character vector
+for ( j in c( "A", "B", "C" ) ) {
+  print( j )
+}
+#> [1] "A"
+#> [1] "B'
+#> [1] "C"
+
+# Logical vector
+for ( j in c( TRUE, FALSE, TRUE ) ) {
+  print( j )
+}
+#> [1] TRUE
+#> [1] FALSE
+#> [1] TRUE
+
+# Can use the function 'seq_along' 
+# to create an integer vector 
+# with the appropriate indices to 
+# iterate over another vector
+x <- c( 10, 100, 1000 )
+for ( k in seq_along(x) ) {
+  # Index each element the vector 'x'
+  print( x[k] )
+}
+#> [1] 10
+#> [1] 100
+#> [1] 1000
+
+# At the start of each iteration 
+# the variable used as an iterator 
+# is set to the value for the 
+# current iteration, irrespective 
+# of the value it was assigned 
+# during prior iterations
+for ( i in 1:3 ) {
+  
+  cat( paste( 'i starts as', i, '\n' ) )
+  i <- i + 2 # Change value of iterator variable
+  cat( paste( '  i ends as', i, '\n\n' ) )
+  
+}
+#> i starts as 1 
+#>   i ends as 3 
+#>   
+#> i starts as 2 
+#>   i ends as 4 
+#>   
+#> i starts as 3 
+#>   i ends as 5 
+#>   
+```
+
 <a href="#TOC">&#129145;</a> <a href="#END">&#129147;</a>
 
 ```R
