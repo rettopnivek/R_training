@@ -436,6 +436,21 @@ x <- switch(
 )
 print( x )
 #> [1] 'No match'
+
+# Another special aspect of the 
+# 'switch' function is to leave 
+# the output blank, in which case 
+# the function skips to the next 
+# option
+input <- 'B'
+switch(
+  input,
+  'A' = 1, 
+  'B' = , # Skips to 'C'
+  'C' = 3,
+  'No match'
+)
+#> [1] 3
 ```
 
 <a href="#TOC">&#129145;</a>
